@@ -1,0 +1,155 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap');
+
+
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #4D4036;
+    padding: 0;
+}
+
+.no-gutters{
+    padding: 0;
+}
+
+/* ------------------------------------- Header - Logo Banner */
+
+header {
+    margin: 0;
+}
+
+.container-logo {
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.banner-logo {
+    height: auto;
+    max-width: auto;
+    margin-top: 20px;
+    vertical-align: center;
+}
+
+.logo-quintain {
+    height: 100px;
+    width: 100%;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    background-image: url("/assets/images/logo-quintain.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.logo-wp {
+    height: 100px;
+    width: 100%;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    background-image: url("/assets/images/logo-wp.jpg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/* -------------------------------------  Header - Navigation Bar */
+
+.list-inline-item:not(:last-child) {
+    margin: 0;
+    padding: 0;
+}
+
+.menucontainer {
+    font-size: 0;
+    padding: 0;
+}
+
+#nav {
+    margin: 0; 
+    padding: 0; 
+}
+
+.menuitem {
+    padding: 0;
+    margin: 0;
+}
+
+.navbar li .menuitem-project1 {
+    display: none;
+    position: relative;
+    margin: 0 auto;
+    opacity: 0.5;
+}
+
+.menuitem:hover .menuitem-project1{
+    display: block;
+    animation-name: slide-down;
+    animation-duration: .5s;
+}
+
+@keyframes slide-down {
+    from {height: 0;}
+    to {height: 100;}
+}
+
+.navbar li {
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 200;
+    line-height: 40px;
+    max-height: 40px;
+    border-top: 1px solid #4D4036;
+    border-bottom: 1px solid #4D4036;
+    vertical-align: middle;
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    }
+
+/* ------------------------------------- Navitation Bar - small screen */
+
+.btn {
+    padding: 0;
+}
+
+.btn-default {
+    box-shadow: 0px 0px 0px 0px;
+    color: #4D4036;
+    font-size: 15px;
+    font-weight: 200;
+    line-height: 40px;
+    border-top: 1px solid #4D4036;
+    border-bottom: 1px solid #4D4036;
+    border-radius: 0;   
+}
+
+.btn-default:focus, .btn-default.focus {
+    box-shadow: 0px 0px 0px 0px;
+    font-size: 15px;
+    font-weight: bolder;
+}
+
+.dropdown-menu {
+    width: 100%;
+    text-align: center;
+    border: 0px solid white;
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown-item {
+    color: #4D4036;
+    font-size: 15px;
+    font-weight: 200;
+}
+
+a.dropdown-item {
+    font-weight: 200;
+}
+
+.dropdown-item:active, .dropdown-item:hover, .dropdown-item:focus {
+    background-color: rgba(77, 64, 54, 0.11);
+    color: #4D4036;
+}

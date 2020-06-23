@@ -1,39 +1,88 @@
-<img src="https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png" style="margin: 0;">
+# MILESTONE PROJECT ONE
 
-Welcome USER_NAME,
+This is the first milsestone project on the Full Stack Web Developer course by Code Institute, utilising HTML and CSS to build a static front-end site to present skills learned to date.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project.
+Working as a Quantity Surveyor (QS) in the construction industry, summarising and presenting data in a concise and visual manner is a frequent requirement.  This project is the first step in an endeavour and exploration to make the accessibility of this data easier and instant for the recipients.
 
-## Gitpod Reminders
+This project will summarise and compare a selection of projects from Wembley Park, putting at the fingertips key information that non-QS stakeholders can seek to ascertain without reverting to the QS or other consultants.  The information may be presented to non-project stakeholders, which will give a snapshot of data that they may compare against other projects.
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+## Steps taken in development
 
-`python3 -m http.server`
+**1. Set up pages file structure required, including assets / css / image**
 
-A blue button should appear to click: *Make Public*,
+* 'index.html' will remain as main page, ie 'Overview'
 
-Another blue button should appear to click: *Open Browser*.
+**2. Set up page structure in index.html**  
+  * Bootstrap  
+  * Fonts  
+  * Fontawesome
+  * Google Fonts
+  * Body outline  
+    1. Header - to include logos and naviagation bar
+    2. Section - to include main page content (to be divided by Bootrap into information 'zones')
+    3. Footer - Concept on what this is to include to be developed at later date  
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+**3. Header - Logo banner**
 
-A blue button should appear to click: *Make Public*,
+  * Utilised two logos as header banner in a horizontal line
+  * Resized images so that they were the same height
+    *  *Is there a way to easily adjust image sizes within CSS?  Struggled to maintain ratio when increasing height.*
+    *  *What is the best way to automatically adjust sizes?  Set container or row height?*
 
-Another blue button should appear to click: *Open Browser*.
+**4. Navigation Bar**
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the backend lessons.
+  * Layout for large screens - utilised Bootstrap grid layout system for navigation bar, hidden on XS and S screens.
+  * Layout for small screens - utilised Bootstrap Dropdown, hidden for MD+ screens
+    *  Adjusted default formatting to match brand for both large and small screens of Naviation Bar
+  * Integrated **hover** over the nav links on the large screen layout to show image of the project
+    * Utilised animation to slide-down opaque version of an image representing the project
+    *  *Challenge to locate image directly below menu name, but overcame.*
+    *  *Would prefer the image to respond to screen size but found this difficult in conjunction with @keyframes*
 
-## Updates Since The Instructional Video
 
-We continually tweak and adjust this template to help give you the best experience. Here are the updates since the original video was made:
+    *  *May consider opting for Bootstrap Navbar in future, as this would accommodate screen size changes more easily, but decided to leave for this project in order that **hover** would work on the large screens.*
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+## UX
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
 
---------
+## Features
 
-Happy coding!
+
+
+#### Existing Features
+
+
+
+#### Features Left to Implement
+
+
+
+
+## Technologies Used
+
+
+
+
+## Testing
+
+
+
+
+## Deployment
+
+
+
+
+## Credits
+
+#### Content
+
+
+
+#### Media
+
+
+
+#### Acknowledgements
