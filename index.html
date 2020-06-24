@@ -19,11 +19,60 @@
 
     <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
 
+       <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawVisualization);
+
+      function drawVisualization() {
+        // Some raw data (not necessarily accurate)
+        var data = google.visualization.arrayToDataTable([
+          ['Month', '£/sqft', 'Ave. £/sqft'],
+          ['1',  325,      323],
+          ['2',  310,      323],
+          ['3',  285,      323],
+          ['4',  300,      323],
+        ]);
+
+        var options = {
+          vAxis: {
+              title: '£/sqft',
+              titleTextStyle: {
+                  color: '#4D4036',
+                  fontSize: '12',
+                  italic: 'false',
+                  bold: 'true', },
+              gridlines: {color: '#E5D9CF', minSpacing: 25}
+                   },
+          hAxis: {
+              title: 'Project',
+              titleTextStyle: {
+                  color: '#4D4036',
+                  fontSize: '12',
+                  italic: 'false',
+                  bold: 'true', },
+                   },
+          seriesType: 'bars',
+          series: {1: {type: 'line'}},
+          colors: ['#7A9499', '#2E474D'],
+          fontName: 'Montserrat',
+          legend: 'none',
+        };
+
+        var chart = new google.visualization.ComboChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+
+        titleTextStyle = {
+            color: 'red',
+        }
+      }
+    </script>
+
     <title>Benchmarking</title>
   </head>
   <body>
     <header>
-	<div class="container container-logo no-gutters">
+	<div class="container-fluid container-logo no-gutters">
 	
 		<div class="row no-gutters banner-logo">
 	
@@ -35,8 +84,8 @@
 	</div>    
     
     
-	<div class="container d-none d-sm-none d-md-block">
-		<nav class="row no-gutters navbar">
+	<div class="container-fluid d-none d-sm-none d-md-block no-gutters">
+		<nav class="row navbar no-gutters">
 	
 			<div class="col no gutters">
 				<ul id="nav" class="list-inline menucontainer">
@@ -55,7 +104,7 @@
 		</nav>
 	</div>
 
-<div class="container d-md-none">
+<div class="container-fluid d-md-none">
 
 	<div class="row">
 		<div class="col-12 no-gutters">
@@ -79,12 +128,31 @@
 
 </header>
 
-    <section></section>
+	<section>
+	
+	<div class="container no-gutters">
+	
+		<div class="row no-gutters">
+	
+			<div class="col-12 col-md-6 overview">
+                <h1>Overview</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id mattis ante, vitae mattis risus. Vivamus eget nisl eget nisi gravida facilisis scelerisque a augue. Duis sit amet lorem diam. Aliquam vulputate lacinia est. 
+                <br>
+                <br>
+                Vestibulum gravida, dui vitae dapibus facilisis, felis arcu ultrices lectus, vitae varius magna justo ut quam. Cras in odio efficitur, dapibus ligula ut, bibendum ex. Mauris lobortis ornare lorem, non commodo velit rutrum vitae. Fusce vitae ullamcorper sapien. In luctus velit commodo, malesuada urna eu, scelerisque.</p>
+			</div>
 
+            <div class="col-12 col-md-6 chartbox">
+                <h1>Benchmark Comparison</h1>
+                <div id="chart_div" style="width: 90%; height: 90%;" class="chart"> </div>
 
-
-    <section></section>
-
+			</div>
+	
+		</div>
+	
+	</div>
+	
+	</section>
     <footer></footer>
   </body>
 </html>

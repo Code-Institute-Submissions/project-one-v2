@@ -7,22 +7,32 @@ body {
     font-family: 'Montserrat', sans-serif;
     color: #4D4036;
     padding: 0;
+    margin: 0;
+    align-content: center;
 }
 
 .no-gutters{
     padding: 0;
+    margin: 0 auto;
+}
+
+.container-fluid {
+    max-width: 1200px;
+}
+
+.container {
+    max-width: 1200px;
 }
 
 /* ------------------------------------- Header - Logo Banner */
 
 header {
     margin: 0;
+    align-content: center;
 }
 
 .container-logo {
     height: auto;
-    margin: 0 auto;
-    padding: 0;
 }
 
 .banner-logo {
@@ -152,4 +162,45 @@ a.dropdown-item {
 .dropdown-item:active, .dropdown-item:hover, .dropdown-item:focus {
     background-color: rgba(77, 64, 54, 0.11);
     color: #4D4036;
+}
+
+/* ------------------------------------- Main Section */
+
+.overview {
+    display: block;
+    border-right: 1px solid rgba(77, 64, 54, 0.5);
+}
+
+.overview, .chartbox {
+    padding: 0 10px;
+    margin: 20px 0;
+}
+
+.overview h1, .chartbox h1 {
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.overview p {
+    max-width: 90%;
+    align-content: center;
+    font-size: 13px;
+    font-weight: 200;
+    text-align: justify;
+    margin: auto;
+}
+
+
+
+/* ------------------------------------- Charts */
+
+
+#chart_div {
+    margin: 0 auto;
+}
+
+.chart {
+    margin: 0 auto;
+    min-height: 200px
 }
