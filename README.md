@@ -38,9 +38,13 @@ This project will summarise and compare a selection of projects from Wembley Par
     * Utilised animation to slide-down opaque version of an image representing the project
     *  *Challenge to locate image directly below menu name, but overcame.*
     *  *Would prefer the image to respond to screen size but found this difficult in conjunction with @keyframes*
-
-
+  * Future improvements?
     *  *May consider opting for Bootstrap Navbar in future, as this would accommodate screen size changes more easily, but decided to leave for this project in order that **hover** would work on the large screens.*
+
+**5. Main Section - Overview and Grapth**
+
+  * Container split into two sections, wrap on XS and S screens to maintain equal / central components
+  * Overview to 
 
 ## UX
 
