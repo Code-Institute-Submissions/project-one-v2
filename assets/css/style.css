@@ -205,16 +205,22 @@ a.dropdown-item {
     min-height: 200px
 }
 
-/* ------------------------------------- Carousel */
+/* ------------------------------------- Gallery */
+
+.gallery {
+    margin: 25px auto;
+}
+
+.gallery h1 {
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+}
 
 .container-carousel {
-    width: 80vh;
-    height: 80vh;
+    width: 90vh;
+    padding: 0 10vh;
+    margin-top: 10px;
+    background-color: rgba(77, 64, 54, 0.185);
 }
 
-.carousel-item img {
-    margin: 0 auto;
-    width: 80vh;
-    height: 80vh;
-
-}
