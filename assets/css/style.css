@@ -193,6 +193,12 @@ a.dropdown-item {
 }
 
 
+
+
+/* ------------------------------------- Timeline */
+
+/* Modal Button */
+
 .btn-secondary {
     display: block;
     width: 300px;
@@ -221,6 +227,22 @@ a.dropdown-item {
     box-shadow: 0 0 0 0;
 }
 
+/* Timeline Chart */
+
+.modal-dialog {
+    margin: 250px auto;
+}
+
+.modal-body {
+    overflow-x: auto;
+    padding: 0px;
+    margin: 20px 20px 0 20px;
+}
+
+
+
+
+
 /* ------------------------------------- Charts */
 
 
@@ -246,9 +268,16 @@ a.dropdown-item {
 }
 
 .container-carousel {
-    width: 90vh;
-    padding: 0 10vh;
+    width: 80vw;
+    padding: 0 10vw;
     margin-top: 10px;
     background-color: rgba(77, 64, 54, 0.185);
+}
+
+@media screen and (max-width: 768px) {
+    .container-carousel {
+        width: 90vw;
+        padding: 0;
+        margin-top: 25px;
 }
 

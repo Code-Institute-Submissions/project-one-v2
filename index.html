@@ -95,6 +95,45 @@
       }
     </script>
 
+    <script type="text/javascript">
+  google.charts.load("current", {packages:["timeline"]});
+  google.charts.setOnLoadCallback(drawChart);
+  function drawChart() {
+    var container = document.getElementById('timeline_overview');
+    var chart = new google.visualization.Timeline(container);
+    var dataTable = new google.visualization.DataTable();
+    dataTable.addColumn({ type: 'string', id: 'Period' });
+    dataTable.addColumn({ type: 'string', id: 'Project Name' });
+    dataTable.addColumn({ type: 'date', id: 'Start' });
+    dataTable.addColumn({ type: 'date', id: 'End' });
+    dataTable.addRows([
+      ['Construction', 'Project 1', new Date(2013, 5), new Date(2016, 2) ],
+      ['Construction', 'Project 2', new Date(2014, 2), new Date(2017, 6) ],
+      ['Construction', 'Project 3', new Date(2014, 10), new Date(2017, 9) ]]);
+
+	var options = {
+        timeline: { 
+            showRowLabels: false,
+            barLabelStyle: {fontName: 'Montserrat', fontSize: '15'},
+        },
+        hAxis: {
+            minValue: new Date(2013, 3),
+            format: "QQ YYY",
+            gridlines: {
+                count: -1,
+            }
+            },
+        colors: ['#99897B', '#4D4036', '#7A9499'],
+        width: 740,
+        height: 200,
+        fontName: 'Montserrat'
+        };
+
+   
+    chart.draw(dataTable, options);
+  }
+</script>
+
     <title>Benchmarking</title>
   </head>
   <body>
@@ -190,27 +229,23 @@
             </p>
             
             <div class="center-timeline">
-            <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#exampleModal">
+            <button type="button" class="btn btn-secondary" data-toggle="modal" data-target=".bd-example-modal-lg">
             Timeline
             </button>
             </div>
 
             <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
+            <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
                 <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Construction Durations</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    ...
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <div id="timeline_overview"></div>
                 </div>
                 </div>
             </div>
@@ -233,7 +268,7 @@
         <h1>Gallery</h1>
 
       <div class="container container-carousel">
-        
+
         <div
           id="carouselExampleIndicators"
           class="carousel slide"
