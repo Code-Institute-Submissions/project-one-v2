@@ -95,6 +95,7 @@ header {
 
 .menuitem:hover .menuitem-project1{
     display: block;
+    z-index: 1100;
     animation-name: slide-down;
     animation-duration: .5s;
 }
