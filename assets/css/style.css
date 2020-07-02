@@ -24,6 +24,8 @@ body {
     max-width: 1200px;
 }
 
+
+
 /* ------------------------------------- Header - Logo Banner */
 
 header {
@@ -269,7 +271,7 @@ a.dropdown-item {
 }
 
 .container-carousel {
-    width: 80vw;
+    width: 60vw;
     padding: 0 10vw;
     margin-top: 10px;
     background-color: rgba(77, 64, 54, 0.185);
@@ -277,8 +279,38 @@ a.dropdown-item {
 
 @media screen and (max-width: 768px) {
     .container-carousel {
-        width: 90vw;
+        width: 70vw;
         padding: 0;
         margin-top: 25px;
 }
 
+
+footer {
+	font-family: 'Open Sans', sans-serif;
+	margin-top:200px;
+	border-top:6px solid rgba(246, 246, 246, 0.8);
+	background-repeat:repeat-x;
+	background-position:left bottom;
+	background-size:contain;
+	background-color:#b8b8b8;
+  width:100%;/*clear space*/
+  float:left;/*clear space*/
+  clear:both/*clear space*/
+}
+
+.footer-container {
+
+}
+
+.footer-row {
+
+}
+
+.test {
+    display: inline-block;
+    width: 100%;
+    border-top: 1px solid red;
+    margin: 25px auto;
+    padding: 25px 0;
+    text-align: center;
+}
