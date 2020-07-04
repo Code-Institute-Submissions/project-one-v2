@@ -282,35 +282,59 @@ a.dropdown-item {
         width: 70vw;
         padding: 0;
         margin-top: 25px;
-}
+}}
 
-
-footer {
-	font-family: 'Open Sans', sans-serif;
-	margin-top:200px;
-	border-top:6px solid rgba(246, 246, 246, 0.8);
-	background-repeat:repeat-x;
-	background-position:left bottom;
-	background-size:contain;
-	background-color:#b8b8b8;
-  width:100%;/*clear space*/
-  float:left;/*clear space*/
-  clear:both/*clear space*/
-}
+/* ------------------------------------- Footer */
 
 .footer-container {
-
+    padding: 0;
+    padding-top: 15px;
 }
 
-.footer-row {
-
+.footerrow {
+    padding: 0;
+    margin: 0;
+    border-top: 1px solid rgba(77, 64, 54, 0.15);
 }
 
-.test {
-    display: inline-block;
+.footer-col-map {
+    display: inline-flex;
+}
+
+.footer-col-web {
+    display: inline-flex;
+    text-align: right;
+    font-size: 14px; 
+    vertical-align: middle;
+}
+
+.footer-col-web img {
+    height: 14px;
+}
+
+.btn-light {
+    color: #4D4036;
+    background-color: #ffffff;
+    font-weight: 100;
+}
+
+.btn-light:hover, .btn-light:focus, .btn-secondary.light {
+    background-color: rgba(77, 64, 54, 0.05);
+    border: 0px solid #ffffff;
+    box-shadow: 0 0 0 0;
+}
+
+.btn-light:not(:disabled):not(.disabled).active, .btn-light:not(:disabled):not(.disabled):active, .show>.btn-light.dropdown-toggle {
+    color: #4D4036;
+    background-color: rgba(77, 64, 54, 0.05);
+    border-color: #ffffff;
+}
+
+.btn-light:not(:disabled):not(.disabled).active:focus, .btn-light:not(:disabled):not(.disabled):active:focus, .show>.btn-light.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0;
+}
+
+#map {
+    height: 300px;
     width: 100%;
-    border-top: 1px solid red;
-    margin: 25px auto;
-    padding: 25px 0;
-    text-align: center;
 }
