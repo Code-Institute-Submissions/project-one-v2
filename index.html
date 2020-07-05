@@ -26,11 +26,12 @@
 	<link rel="stylesheet" href="assets/css/style.css" type="text/css" />
 
 	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-	<script type="text/javascript">
-		google.charts.load("current", { packages: ["corechart"] });
-      google.charts.setOnLoadCallback(drawVisualization);
+    <script type="text/javascript">
+        
+        google.charts.load("current", { packages: ["corechart"] });
+        google.charts.setOnLoadCallback(drawVisualization);
 
-      function drawVisualization() {
+        function drawVisualization() {
         // Some raw data (not necessarily accurate)
         var data = google.visualization.arrayToDataTable([
           ["Month", "£/sqft", "Ave. £/sqft"],
@@ -80,41 +81,40 @@
 
 	<script type="text/javascript">
 		google.charts.load("current", {packages:["timeline"]});
-  google.charts.setOnLoadCallback(drawChart);
-  function drawChart() {
-    var container = document.getElementById('timeline_overview');
-    var chart = new google.visualization.Timeline(container);
-    var dataTable = new google.visualization.DataTable();
-    dataTable.addColumn({ type: 'string', id: 'Period' });
-    dataTable.addColumn({ type: 'string', id: 'Project Name' });
-    dataTable.addColumn({ type: 'date', id: 'Start' });
-    dataTable.addColumn({ type: 'date', id: 'End' });
-    dataTable.addRows([
-      ['Construction', 'Project 1', new Date(2013, 5), new Date(2016, 2) ],
-      ['Construction', 'Project 2', new Date(2014, 2), new Date(2017, 6) ],
-      ['Construction', 'Project 3', new Date(2014, 10), new Date(2017, 9) ]]);
+        google.charts.setOnLoadCallback(drawChart);
+        function drawChart() {
+        var container = document.getElementById('timeline_overview');
+        var chart = new google.visualization.Timeline(container);
+        var dataTable = new google.visualization.DataTable();
+        dataTable.addColumn({ type: 'string', id: 'Period' });
+        dataTable.addColumn({ type: 'string', id: 'Project Name' });
+        dataTable.addColumn({ type: 'date', id: 'Start' });
+        dataTable.addColumn({ type: 'date', id: 'End' });
+        dataTable.addRows([
+        ['Construction', 'Project 1', new Date(2013, 5), new Date(2016, 2) ],
+        ['Construction', 'Project 2', new Date(2014, 2), new Date(2017, 6) ],
+        ['Construction', 'Project 3', new Date(2014, 10), new Date(2017, 9) ]]);
 
-	var options = {
-        timeline: { 
-            showRowLabels: false,
-            barLabelStyle: {fontName: 'Montserrat', fontSize: '15'},
-        },
-        hAxis: {
-            minValue: new Date(2013, 3),
-            format: "QQ YYY",
-            gridlines: {
-                count: -1,
-            }
+        var options = {
+            timeline: { 
+                showRowLabels: false,
+                barLabelStyle: {fontName: 'Montserrat', fontSize: '15'},
             },
-        colors: ['#99897B', '#4D4036', '#7A9499'],
-        width: 740,
-        height: 200,
-        fontName: 'Montserrat'
-        };
+            hAxis: {
+                minValue: new Date(2013, 3),
+                format: "QQ YYY",
+                gridlines: {
+                    count: -1,
+                }
+                },
+            colors: ['#99897B', '#4D4036', '#7A9499'],
+            width: 740,
+            height: 200,
+            fontName: 'Montserrat'
+            };
 
-   
-    chart.draw(dataTable, options);
-  }
+        chart.draw(dataTable, options);
+        }
 	</script>
 
 	<title>Benchmarking</title>

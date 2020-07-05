@@ -308,7 +308,8 @@ a.dropdown-item {
 .footer-col-web {
     display: inline-flex;
     text-align: right;
-    font-size: 14px; 
+    font-size: 14px;
+    color: rgba(77, 64, 54, 0.3);
 }
 
 .footer-col-web p, .footer-col-web a {
@@ -321,7 +322,7 @@ a.dropdown-item {
 }
 
 .btn-light {
-    color: #4D4036;
+    color: rgba(77, 64, 54, 0.3);
     background-color: #ffffff;
     font-weight: 100;
 }
