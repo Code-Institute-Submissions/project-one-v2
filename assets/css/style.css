@@ -92,6 +92,14 @@ header {
     color: #4D4036;
 }
 
+.active {
+    background-color: rgba(153, 137, 123, 0.308);
+}
+
+.active a {
+    font-weight: 800;
+}
+
 .navbar li .menuitem-project1 {
     display: none;
     position: relative;
