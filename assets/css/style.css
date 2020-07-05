@@ -305,11 +305,15 @@ a.dropdown-item {
     display: inline-flex;
     text-align: right;
     font-size: 14px; 
-    vertical-align: middle;
+}
+
+.footer-col-web p, .footer-col-web a {
+    margin: auto;
 }
 
 .footer-col-web img {
     height: 14px;
+    
 }
 
 .btn-light {
