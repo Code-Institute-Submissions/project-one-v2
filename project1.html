@@ -82,23 +82,23 @@
         dataTable.addColumn({ type: 'date', id: 'Start' });
         dataTable.addColumn({ type: 'date', id: 'End' });
         dataTable.addRows([
-        ['Construction', 'Project 1', new Date(2013, 5), new Date(2016, 2) ],
-        ['Construction', 'Project 2', new Date(2014, 2), new Date(2017, 6) ],
-        ['Construction', 'Project 3', new Date(2014, 10), new Date(2017, 9) ]]);
+        ['Planning', 'S73', new Date(2012, 4), new Date(2012, 8) ],
+        ['Planning', 'RMA', new Date(2012, 12), new Date(2013, 5) ],
+        ['Design', 'Stage 2', new Date(2012, 1), new Date(2012, 6) ],
+        ['Design', 'Stage 3', new Date(2012, 6), new Date(2013, 4) ],
+        ['Design', 'Stage 4', new Date(2013, 4), new Date(2014, 1) ],
+        ['Construction', 'PCSA', new Date(2013, 7), new Date(2014, 3) ],
+        ['Construction', 'Construction', new Date(2014, 3), new Date(2017, 2) ]]);
 
         var options = {
             timeline: { 
                 showRowLabels: false,
-                barLabelStyle: {fontName: 'Montserrat', fontSize: '15'},
+                barLabelStyle: {fontName: 'Montserrat', fontSize: '12'},
             },
             hAxis: {
-                minValue: new Date(2013, 3),
                 format: "QQ YYY",
-                gridlines: {
-                    count: -1,
-                }
                 },
-            colors: ['#99897B', '#4D4036', '#7A9499'],
+            colors: ['#BFB1A4', '#726355', '#94979F', '#555A67','#212633', '#647374', '#344445'],
             width: 740,
             height: 200,
             fontName: 'Montserrat'
@@ -174,10 +174,10 @@
                         Project 1
                         </button>
 						<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-							<a class="dropdown-item" href="#">Overview</a>
-							<a class="dropdown-item" href="#">Project 1</a>
-							<a class="dropdown-item" href="#">Project 2</a>
-							<a class="dropdown-item" href="#">Project 3</a>
+							<a class="dropdown-item" href="index.html">Overview</a>
+							<a class="dropdown-item" href="project1.html">Project 1</a>
+							<a class="dropdown-item" href="project2.html">Project 2</a>
+							<a class="dropdown-item" href="project3.html">Project 3</a>
 						</div>
 					</div>
 				</div>
@@ -189,7 +189,7 @@
 		<div class="container no-gutters">
 			<div class="row no-gutters">
 				<div class="col-12 col-md-6 overview">
-					<h1>Overview</h1>
+					<h1>Project 1</h1>
 					<p>
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur	id mattis ante, vitae mattis risus. Vivamus eget nisl eget nisi	gravida facilisis scelerisque a augue. Duis sit amet lorem diam.
 						Aliquam vulputate lacinia est.
@@ -213,7 +213,7 @@
 							<div class="modal-dialog modal-lg">
 								<div class="modal-content">
 									<div class="modal-header">
-										<h5 class="modal-title" id="exampleModalLabel">Construction Durations</h5>
+										<h5 class="modal-title" id="exampleModalLabel">Project Timeline</h5>
 										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
                                         </button>

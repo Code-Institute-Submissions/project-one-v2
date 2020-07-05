@@ -86,8 +86,8 @@
         var container = document.getElementById('timeline_overview');
         var chart = new google.visualization.Timeline(container);
         var dataTable = new google.visualization.DataTable();
-        dataTable.addColumn({ type: 'string', id: 'Period' });
-        dataTable.addColumn({ type: 'string', id: 'Project Name' });
+        dataTable.addColumn({ type: 'string', id: 'Activity' });
+        dataTable.addColumn({ type: 'string', id: 'Stage' });
         dataTable.addColumn({ type: 'date', id: 'Start' });
         dataTable.addColumn({ type: 'date', id: 'End' });
         dataTable.addRows([
@@ -183,10 +183,10 @@
                         Overview
                         </button>
 						<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-							<a class="dropdown-item" href="#">Overview</a>
-							<a class="dropdown-item" href="#">Project 1</a>
-							<a class="dropdown-item" href="#">Project 2</a>
-							<a class="dropdown-item" href="#">Project 3</a>
+							<a class="dropdown-item" href="index.html">Overview</a>
+							<a class="dropdown-item" href="project1.html">Project 1</a>
+							<a class="dropdown-item" href="project2.html">Project 2</a>
+							<a class="dropdown-item" href="project3.html">Project 3</a>
 						</div>
 					</div>
 				</div>
