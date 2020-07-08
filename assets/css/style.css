@@ -38,32 +38,21 @@ header {
 }
 
 .banner-logo {
-    height: auto;
-    max-width: auto;
     margin-top: 20px;
-    vertical-align: center;
 }
 
 .logo-quintain {
+    display: inline-flex;
     height: 100px;
-    width: 100%;
     margin-top: 25px;
     margin-bottom: 25px;
-    background-image: url("/assets/images/logo-quintain.png");
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
 }
 
 .logo-wp {
+    display: inline-flex;
     height: 100px;
-    width: 100%;
     margin-top: 25px;
     margin-bottom: 25px;
-    background-image: url("/assets/images/logo-wp.jpg");
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
 }
 
 /* -------------------------------------  Header - Navigation Bar */
