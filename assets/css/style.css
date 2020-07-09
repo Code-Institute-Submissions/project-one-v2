@@ -90,23 +90,27 @@ header {
 }
 
 .navbar li .menuitem-project1 {
-    display: none;
+    display: block;
     position: relative;
     margin: 0 auto;
-    opacity: 0.5;
+    width: 0;
+    height: 0; 
+    transition: width 1s, height 1s;
+    bottom: 0;
 }
 
-.menuitem:hover .menuitem-project1{
-    display: block;
-    z-index: 1100;
-    animation-name: slide-down;
+.menuitem:hover > .menuitem-project1 {
+    animation-name: menu-hover;
     animation-duration: .5s;
+    animation-fill-mode: forwards;
+    z-index: 100; 
 }
+  
+@keyframes menu-hover {
+    from {height: 0; width: 0; bottom: 0;}
+    to {height: 200px; width: 200px; bottom: 100px;}
+}    
 
-@keyframes slide-down {
-    from {height: 0;}
-    to {height: 100;}
-}
 
 .navbar li {
     display: inline-block;
