@@ -78,7 +78,15 @@ header {
 }
 
 .menuitem a {
+    position: relative;
     color: #4D4036;
+    z-index: 2;
+}
+
+.menuitem a:hover {
+    color: #ffffff;
+    font-weight: 800;
+    text-decoration: none;
 }
 
 .active {
@@ -89,7 +97,7 @@ header {
     font-weight: 800;
 }
 
-.navbar li .menuitem-project1 {
+.menuitem-project1 {
     display: block;
     position: relative;
     margin: 0 auto;
@@ -97,13 +105,13 @@ header {
     height: 0; 
     transition: width 1s, height 1s;
     bottom: 0;
+    z-index: 1;
 }
 
 .menuitem:hover > .menuitem-project1 {
     animation-name: menu-hover;
     animation-duration: .5s;
     animation-fill-mode: forwards;
-    z-index: 100; 
 }
   
 @keyframes menu-hover {
@@ -124,6 +132,7 @@ header {
     text-align: center;
     margin-top: 25px;
     margin-bottom: 25px;
+    z-index: 2;
     }
 
 /* ------------------------------------- Navitation Bar - small screen */
