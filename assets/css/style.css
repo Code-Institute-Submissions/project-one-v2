@@ -203,7 +203,7 @@ a.dropdown-item {
 
 /* Modal Button */
 
-.btn-secondary {
+.btn-timeline {
     display: block;
     width: 300px;
     padding: 10px 20px;
@@ -214,21 +214,15 @@ a.dropdown-item {
     align-content: center;
 }
 
-.btn-secondary:hover, .btn-secondary:focus, .btn-secondary.focus {
+.btn-timeline:hover { 
     background-color: #2E474D;
     color: #7A9499;
     border: 0px solid white;
     box-shadow: 0 0 0 0;
 }
 
-.btn-secondary:not(:disabled):not(.disabled).active, .btn-secondary:not(:disabled):not(.disabled):active, .show>.btn-secondary.dropdown-toggle {
-    background-color: #2E474D;
-    color: #7A9499;
-    border: 0px solid white;
-}
-
-.btn-secondary:not(:disabled):not(.disabled).active:focus, .btn-secondary:not(:disabled):not(.disabled):active:focus, .show>.btn-secondary.dropdown-toggle:focus {
-    box-shadow: 0 0 0 0;
+.btn-timeline:focus, .btn-timeline.focus { 
+    box-shadow: 0 0 0 0.2rem rgba(46, 71, 77, 0.137);
 }
 
 /* Timeline Chart */
