@@ -287,8 +287,8 @@ a.dropdown-item {
 }
 
 .footerrow {
-    padding: 0;
-    margin: 0;
+    padding: 15px 0 0 0;
+    margin: 0 0 50px 0;
     border-top: 1px solid rgba(77, 64, 54, 0.15);
 }
 
@@ -309,29 +309,32 @@ a.dropdown-item {
 
 .footer-col-web img {
     height: 14px;
-    
 }
 
-.btn-light {
+.footer-col-web img:hover {
+    height: 28px;
+}
+
+.btn-map {
     color: rgba(77, 64, 54, 0.3);
     background-color: #ffffff;
     font-weight: 100;
 }
 
-.btn-light:hover, .btn-light:focus, .btn-secondary.light {
+.btn-map:hover {
     background-color: rgba(77, 64, 54, 0.05);
     border: 0px solid #ffffff;
-    box-shadow: 0 0 0 0;
+    box-shadow: 0 0 0 0.2rem rgba(122, 148, 153, 0.178);
 }
 
-.btn-light:not(:disabled):not(.disabled).active, .btn-light:not(:disabled):not(.disabled):active, .show>.btn-light.dropdown-toggle {
-    color: #4D4036;
-    background-color: rgba(77, 64, 54, 0.05);
-    border-color: #ffffff;
+.btn-map:focus, btn-map.focus {
+    background-color: #ffffff;
+    box-shadow: 0 0 0 ;
 }
 
-.btn-light:not(:disabled):not(.disabled).active:focus, .btn-light:not(:disabled):not(.disabled):active:focus, .show>.btn-light.dropdown-toggle:focus {
-    box-shadow: 0 0 0 0;
+.map-box {
+    padding: 0px;
+    border: 0px solid #ffffff;
 }
 
 #map {
