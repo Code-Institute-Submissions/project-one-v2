@@ -135,7 +135,7 @@ header {
     z-index: 2;
     }
 
-/* ------------------------------------- Navitation Bar - small screen */
+/* ----------------------------------- Navitation Bar - small screen - Start */
 
 .btn-nav {
     padding: 0;
@@ -178,7 +178,10 @@ a.dropdown-item {
     color: #4D4036;
 }
 
-/* ------------------------------------- Main Section */
+
+/* ----------------------------------- Navitation Bar - small screen - End */
+
+/* ------------------------------------- Main Section - Start */
 
 .overview {
     display: block;
@@ -206,7 +209,7 @@ a.dropdown-item {
 }
 
 
-
+/* ------------------------------------- Main Section - End */
 
 /* ------------------------------------- Timeline */
 
@@ -287,6 +290,23 @@ a.dropdown-item {
         padding: 0;
         margin-top: 25px;
 }}
+
+@media screen and (min-width: 768px) {
+    .carousel-control-next {
+        right: -8vw;
+    }
+    .carousel-control-next-icon {
+        height: 40px;
+        width: 40px;
+    }
+    .carousel-control-prev {
+        left: -8vw;
+    }
+    .carousel-control-prev-icon {
+        height: 40px;
+        width: 40px;
+    }
+}
 
 /* ------------------------------------- Footer */
 
