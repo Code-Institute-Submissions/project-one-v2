@@ -20,13 +20,13 @@ My experience as a QS has led me to the following conclusions:-
 
 * Clients regularly ask for high level cost information on projects, they do not store the data themselves.
 
-* QS's will maintain records, but often not in an immediately presentable format.
+* Information is normally maintained offline in a variety of formats and locations, which may not be consistent.
 
-* Records are normally maintained offline in Excel.
+* Records that collate information are normally rare and if implemented, poorly maintained and not updated frequently.
 
-* Clients request information and there is often a time-lag to deliver that information.
+* Clients will request information; there is often a time-lag to deliver that information due to the need to locate it.
 
-* Delivery of information can sometimes be rushed, resulting in poor presentation, incomplete information or even inaccurate.
+* Delivery of information can sometimes be rushed, resulting in poor presentation, incomplete information or even inaccurate due to the above factors.
 
 By implementing a website that provides basic but key information for clients, the QS will ensure that information is correct and uploaded timeously, and be available on-demand for clients.
 
@@ -37,18 +37,21 @@ I believe clients will really appreciate this level of access to information, as
 
 The functions of the website are to:-
 
-1. Provide a lite repository of projects for key stakeholders to access data on-demand.
+1. Provide a 'lite' repository of projects with key information for stakeholders to access data on-demand.
 
 2. Users will be able to discern from each Project page:-
 
-   * A high level description of the project - this will allow users not familiar with the project to learn important information about the project.
-   * The project timeline will show users the overall duration of the project, from early design and planning stages through to construction. 
-   * The cost breakdown will provide users with high-level, key cost information which may be compared to other projects.
-   * A gallery has also been included so users may see how the project appears.
+   * A high level description of the project - this will allow users not familiar with the project to learn important information about the project. The content may include a description of the building as a minimum, but may be extended to include other key information like areas of buildings, the number of apartments, tenure types, etc.  This could be included in future interations of the website.
+
+   * The project timeline will provide users with the overall duration of the project, from early design and planning stages through to construction.  The full detail of a project programme is not often recorded, often limited to construction durations, the final, longest and period of greatest expenditure.  However, the overall duration is obviously important and other parts of the programme can be useful and informative, too.
+
+   * The cost breakdown will provide users with high-level, key cost information.  The information is displayed on a cost per sqft basis, rather than the total cost.  Whilst the total cost is obviously important, users will ask for the cost per sqft 9 out of 10 times in order to compare to other projects, and utilise the information for planning future projects.
+
+   * A gallery has also been included so users may see how the project appears.  Some users may use the site to refer for information, but may not have had any involvement in the project, so will be particularly relevant.
 
 3. The Overview page summarises key aspects of the Project pages:-
-   * The timeline shows overlapping construction (only) durations. (As the construction duration is the most visible and cost significant period of the project, the Overview page limited the timeline to this aspect for comparison purposes.)
-   * A benchmark of the Projects included allows for a comparison of the building costs per sqft.
+   * The timeline shows overlapping construction (only) durations. As the construction duration is the most visible and cost significant period of the project, the Overview page limited the timeline to this aspect for comparison purposes.
+   * A benchmark of the Projects included displays a comparison of the building costs per sqft.  As noted above, the cost of a project will be frequently sought by clients.  This graph also displays the average cost, which users will also want to know.
 
 4. The footer includes:-
    * A site map of Wembley Park with locations of the Projects, and
@@ -60,6 +63,10 @@ The functions of the website are to:-
 ### **Mobile v. Desktop**
 
 The site was developed with a desktop approach primarily, but still mobile-friendly.  Most users will access the website from their computer whilst working, but there may be occassions when they need to access data on-the-go for quick reference.
+
+With this in mind, the site has two variants to reflect the desktop / landscape and mobile / portrait variants.  As such, I have utilised one breakpoint at Medium / 768px.
+
+The website will still be useable on portrait screen sizes at this size.  The website also has a maximum width of 1200px maintain design ratios on extra large screens.
 
 
 ### **Key concepts**
@@ -99,7 +106,7 @@ Whilst acknowledged that this font has been used frequently in the Code Institut
 
 ### Imagery
 
-As the website is meant to be functional, there is no background images and limited background colours utilised to maintain a clear, crisp display.  Whilst images are of course important to provide context and understanding to a user, they are limited to the gallery.
+As the website is meant to be functional, there is no background images and limited background colours utilised to maintain a clear, crisp display that is functional and distraction-free for users.  Whilst images are of course important to provide context and understanding to a user, they are limited to the gallery (images of the Park and the projects) and corporate logos.
 
 
 ## Features
@@ -107,9 +114,15 @@ As the website is meant to be functional, there is no background images and limi
 ### Responsive
 
 * Site is suitable for mobile through desktop displays.
-* Navbar is responsive to the display size.  Whilst a bootstrap navbar could have been implemented for both, I wanted to have the flexibility to implement different features on larger displays.
-* Gaallery is responsive to display size, supporting a background in the container on larger screens, but no background and pictures maximum width on smaller screens.
+* Navbar is responsive to the display size.  Whilst a bootstrap navbar could have been implemented for both, I wanted to have the flexibility to implement different features on the Navbar on larger displays.
+* Gallery is responsive to display size.  
+  * On large screens, the gallery supports a solid background in the container to balance the size of the images with the content above.  The images are close in size to a single column width above, and the addition of the background provides a transition between the 2 columns above / full page width and the image.  To utilise the space, the Prev and Next icons were pushed left and right respectively, and enlarged.  
 
+    ![Gallery on large screens](/README-attachments/gallery-large.png)
+
+  *  On smaller screen, the carousel reverts without a background, and now relates to the single column width of the content above.
+
+        ![Gallery on large screens](/README-attachments/gallery-small.png)
 
 ### Interactive Elements
 
@@ -121,20 +134,52 @@ As the website is meant to be functional, there is no background images and limi
 
 ### Existing Features  
 
-* Overview Page - purpose of this page is to provide an overview and comparison of the projects at Wembley Park.
-* Project Page (one for each project) - purpose of this page is to provide further detail and provide specific project images than the Overview page.
-* Timeline - on the overview, this project compares the project construction timeelines.  On the Project pages, this provides additional timelines for the planning and design timelines.
-* Benchmark Comparison / Cost Breakdown - the Overview page has a bar chart that compares the construciton costs on a £/sqft basis of each Project, and the average.  The pie chart on the Projects' pages show a breakdown of that cost into an elemental format.
-* Gallery - shows a selection of images from across the Park on the Overview, and of each building for the Projects.
-* The footer contains:-
+#### The Pages
+
+1. **Overview Page**  
+Purpose of this page is to provide an overview and comparison of the projects at Wembley Park.
+
+2. **Project Page**  
+Included one for each project.  Purpose of these page is to provide further detail and provide specific project images.
+
+#### Key Features of Pages
+
+1. **Timeline**
+    * On the overview, this project compares the project construction timeelines
+    * On the Project pages, this provides additional timelines for the planning and design timelines. 
+    * Durations were modified from default to Quarters, which is commonly used for measuring time in construction.  
+    * Hovering over the bar provides the detailed date information and duration for ease of reference in the Tooltip.
+    ![Timeline Snip](/README-attachments/Timeline.png "Timeline")  
+
+
+2. **Benchmark Comparison / Cost Breakdown**
+    * The Overview page has a bar chart that compares the construciton costs on a £/sqft basis of each Project, and the average.  
+    ![Bar Chart](/README-attachments/barchart.JPG "Bar Chart")
+    * The pie chart on the Projects' pages show a breakdown of that cost into an elemental format.
+    ![Pie Chart](/README-attachments/piechart.JPG "Pie Chart")
+
+3. **Gallery**
+
+    The gallery shows a selection of images from across the Park on the Overview, and of each building for the Projects.
+
+4. **Footer**
+
+   The footer contains:-
+
    * Project Map - a map showing the locations of the Projects will drop down below the footer when activated.
-   * Corporate website links - links to the Quintain website and Wembley Park websites are included in the footer.
+        <div style="height: 0; padding-bottom: calc(35.31% + 35px); position:relative; width: 100%;"><iframe allow="autoplay; gyroscope;" allowfullscreen height="100%" referrerpolicy="strict-origin" src="https://www.kapwing.com/e/5f0a1c4df828360015c7db75" style="border:0; height:100%; left:0; overflow:hidden; position:absolute; top:0; width:100%" title="Embedded content made with Kapwing" width="100%"></iframe></div>
+   * Corporate website links - links to the Quintain website and Wembley Park websites are included in the footer.  The logos enlarge when the cursor hovers over:-  
+   <img src="/README-attachments/footerWP.gif" height="40" width="40" alt="Wembley Park logo footer GIF">
+   <img src="/README-attachments/footerQ.gif" height="40" width="40" alt="Quintain logo footer GIF">
+
 
 
 ### Features to Implement in the Future
 
 * Nr of Projects - add more projects to the website.
-* Addiitonal project information - rather than make the page longer, add further carousels to the two columns so that a user can rotate through.
+* Addiitonal project information - rather than make the page longer, add further carousels to the two columns so that a user can rotate through.  Aspects may include:-
+  * Within the Overview: Building Areas, Apt numbers, tenure types;
+  * within the Cost Breakdown: Total Cost, Cost per Apt.
 * Link data to a database, so that they can be updated more easily.
 
 
@@ -159,13 +204,13 @@ Google Charts was used for displaying data in graphical format, including timeli
 * [Google Maps](https://www.google.co.uk/maps) including [Styling Wizard](https://mapstyle.withgoogle.com/)  
 Google Maps was used in the footer to provide locations for the Projects.  Functionaly of the maps was limited in terms of zoom, map type and points of interest to maintain a simple viewport of the Park and Project locations.  
 
-* Popper.js  
+* [Popper.js](https://popper.js.org/)  
 Popper.js came with Bootstrap to make the popovers operation responsive.
 
-* jQuery  
+* [jQuery](https://jquery.com/)  
 jQuery came with Bootstrap to make some of the components operate in JavaScript.
 
-* Git  
+* [Git](https://git-scm.com/)  
 Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
 
 * [GitHub](https://github.com/)  
@@ -179,6 +224,12 @@ Figma was used to create the wireframes during the design process.
 
 * [Paletton](https://paletton.com/)  
 Paletton was used to create a pallette of colours that supported the main colour of the website, which is based on one of the company logos.
+
+* [Kapwing](https://www.kapwing.com/)
+Kapwing used for editing videos and creating GIFs used in this README file.
+
+* [Screen Recorder](https://chrome.google.com/webstore/detail/screen-recorder/hniebljpgcogalllopnjokppmgbhaden)  
+Screen Recorder used for creating videos (edited in Kapwing) of website features in operation.
 
 
 ## Testing
@@ -202,17 +253,28 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 ### Known Bugs
 
 * On the timeline, the dates are a mixture of regular and bold text.  It does not appear possible to format this axis on this particular chart type.
+* The Chart size does not respond on page re-sizing without re-freshing.
+* The Pie Chart does not show the Total, only a breakdown of the values.
+
 
 ## Deployment
 
-..........
+The website has been deployed on GitHub and is currently publicly accessible. 
+
+The development of the website has been undertaken on Gitpod.
+
+The steps from start to present were:-
+
+    1.Creation of repository on GitHub, utilising Code Institute template.
+    2. Launch of repository on Gitpod.
+    3. Utilise Git to push content back to GitHub.  This was undertaken at regular intervals throughout the development of the website.
+    4. Deployment of the webpage was implemented by
+        - Going to the 'Settings' of the repository,
+        - Scrolling to 'GitHub Pages' section,
+        - Selecting 'master branch' of the Source dropdown menu
 
 
 ## Credits
-
-### Code
-
-*  Bootstrap4: Bootstrap Library used throughout the project mainly to make site responsive using the Bootstrap Grid System.
 
 ### Content
 
@@ -224,14 +286,4 @@ All Images are the ownership of Quintain, my employwer.
 
 ### Acknowledgements
 
-........
-
-#### Content
-
-
-
-#### Media
-
-
-
-#### Acknowledgements
+Thank you to my mentor for feedback and advice given throughout the project.
