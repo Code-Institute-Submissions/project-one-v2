@@ -244,16 +244,26 @@ Screen Recorder used for creating videos (edited in Kapwing) of website features
 
 The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.
 
-* [W3C Markup Validator](https://validator.w3.org/) - Results
-* [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) - Results
+* [W3C Markup Validator](https://validator.w3.org/)
 
+    Results:-
+    * [Overview](https://validator.w3.org/nu/?doc=https%3A%2F%2Fdkeddie.github.io%2Fproject-one%2Findex.html)
+    * [Project 1](https://validator.w3.org/nu/?doc=https%3A%2F%2Fdkeddie.github.io%2Fproject-one%2Fproject1.html)
+    * [Project 2](https://validator.w3.org/nu/?doc=https%3A%2F%2Fdkeddie.github.io%2Fproject-one%2Fproject2.html)
+    * [Project 3](https://validator.w3.org/nu/?doc=https%3A%2F%2Fdkeddie.github.io%2Fproject-one%2Fproject3.html)
+
+There are 4 common errors and warnings highlighted from the validation.  These relate to the programmes / scripts used to import the Google Charts functionality into the website.  As the code has been copied from Google Charts, and not amended by myself, I have not attempted to rectify the issues flagged by the validation service, as they may alter the functionality of the scripts.
+
+* [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) - [Results](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fdkeddie.github.io%2Fproject-one%2Fassets%2Fcss%2Fstyle.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+
+There are no errors found on the validation service.
 
 ### Further Testing
 
 **Testing is still to be undertaken**
 
 * The Website was tested on Google Chrome, Internet Explorer, Microsoft Edge and Safari browsers.
-* The website was viewed on a variety of devices such as Desktop, Laptop, iPhone7, iPhone 8 & iPhoneX.
+* The website was viewed on a variety of devices such as Desktop, Laptop, iPhone 8 & iPhoneX.
 * A large amount of testing was done to ensure that all pages were linking correctly.
 
 ### Known Bugs
