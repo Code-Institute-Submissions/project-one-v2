@@ -26,7 +26,7 @@ body {
 
 
 
-/* ------------------------------------- Header - Logo Banner */
+/* ------------------------------------- Header - Logo Banner - Start*/
 
 header {
     margin: 0;
@@ -55,7 +55,9 @@ header {
     margin-bottom: 25px;
 }
 
-/* -------------------------------------  Header - Navigation Bar */
+/* ------------------------------------- Header - Logo Banner - end */
+
+/* -------------------------------------  Header - Navigation Bar - large screen - Start*/
 
 .list-inline-item:not(:last-child) {
     margin: 0;
@@ -135,6 +137,8 @@ header {
     z-index: 2;
     }
 
+/* -------------------------------------  Header - Navigation Bar - large screen - End*/
+
 /* ----------------------------------- Navitation Bar - small screen - Start */
 
 .btn-nav {
@@ -181,7 +185,7 @@ a.dropdown-item {
 
 /* ----------------------------------- Navitation Bar - small screen - End */
 
-/* ------------------------------------- Main Section - Start */
+/* ------------------------------------- Main Section - General - Start */
 
 .overview {
     display: block;
@@ -209,9 +213,9 @@ a.dropdown-item {
 }
 
 
-/* ------------------------------------- Main Section - End */
+/* ------------------------------------- Main Section - General - End */
 
-/* ------------------------------------- Timeline */
+/* ------------------------------------- Timeline - Start */
 
 /* Modal Button */
 
@@ -251,9 +255,9 @@ a.dropdown-item {
 
 
 
+/* ------------------------------------- Timeline - End */
 
-
-/* ------------------------------------- Charts */
+/* ------------------------------------- Chart - Start */
 
 
 #chart_div {
@@ -265,7 +269,9 @@ a.dropdown-item {
     min-height: 200px
 }
 
-/* ------------------------------------- Gallery */
+/* ------------------------------------- Chart - End */
+
+/* ------------------------------------- Gallery - Start*/
 
 .gallery {
     margin: 25px auto;
@@ -308,7 +314,10 @@ a.dropdown-item {
     }
 }
 
-/* ------------------------------------- Footer */
+/* ------------------------------------- Gallery - End*/
+
+
+/* ------------------------------------- Footer - Start*/
 
 .footer-container {
     padding: 0;
@@ -344,6 +353,8 @@ a.dropdown-item {
     height: 28px;
 }
 
+/* Map Button */
+
 .btn-map {
     color: rgba(77, 64, 54, 0.3);
     background-color: #ffffff;
@@ -361,6 +372,8 @@ a.dropdown-item {
     box-shadow: 0 0 0 ;
 }
 
+/* Dropdown Map */
+
 .map-box {
     padding: 0px;
     border: 0px solid #ffffff;
@@ -370,3 +383,5 @@ a.dropdown-item {
     height: 300px;
     width: 100%;
 }
+
+/* ------------------------------------- Footer - End*/

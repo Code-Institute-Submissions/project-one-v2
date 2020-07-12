@@ -144,25 +144,31 @@ Included one for each project.  Purpose of these page is to provide further deta
 
 #### Key Features of Pages
 
-1. **Timeline**
-    * On the overview, this project compares the project construction timeelines
+1. **Navigation Bar**
+
+    On large screens, an image of the Project appears when the cursor hovers over the link:-
+    ![Navbar hover](/README-attachments/Navbar.gif)  
+    As the project name may change over the lifetime of a project, some users who may not be aware of changes can easily identify the project from the image.
+
+2. **Timeline**
+    * On the overview, this project compares the project construction timelines
     * On the Project pages, this provides additional timelines for the planning and design timelines. 
     * Durations were modified from default to Quarters, which is commonly used for measuring time in construction.  
     * Hovering over the bar provides the detailed date information and duration for ease of reference in the Tooltip.
     ![Timeline Snip](/README-attachments/Timeline.png "Timeline")  
 
 
-2. **Benchmark Comparison / Cost Breakdown**
+3. **Benchmark Comparison / Cost Breakdown**
     * The Overview page has a bar chart that compares the construciton costs on a £/sqft basis of each Project, and the average.  
     ![Bar Chart](/README-attachments/barchart.JPG "Bar Chart")
     * The pie chart on the Projects' pages show a breakdown of that cost into an elemental format.
     ![Pie Chart](/README-attachments/piechart.JPG "Pie Chart")
 
-3. **Gallery**
+4. **Gallery**
 
     The gallery shows a selection of images from across the Park on the Overview, and of each building for the Projects.
 
-4. **Footer**
+5. **Footer**
 
    The footer contains:-
 

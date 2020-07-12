@@ -20,10 +20,9 @@
 		integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
 	</script>
 
-	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
-		integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
-
 	<link rel="stylesheet" href="assets/css/style.css" type="text/css" />
+
+    <!-- Google Chart - Bar Chart - Start -->
 
 	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
@@ -79,6 +78,10 @@
       }
 	</script>
 
+    <!-- Google Chart - Bar Chart - End -->
+
+    <!-- Google Chart - Timeline - Start -->
+
 	<script type="text/javascript">
 		google.charts.load("current", {packages:["timeline"]});
         google.charts.setOnLoadCallback(drawChart);
@@ -117,10 +120,16 @@
         }
 	</script>
 
+    <!-- Google Chart - Timeline - End -->
+
 	<title>Benchmarking</title>
+
 </head>
 
 <body>
+
+<!-- Logo Banner - Start -->
+
 	<header>
 		<div class="container-fluid container-logo no-gutters">
 			<div class="row justify-content-center banner-logo">
@@ -132,6 +141,10 @@
                 </div>
 			</div>
 		</div>
+
+<!-- Logo Banner - End -->
+
+<!-- Navbar - Large Screen - Start -->
 
 		<div class="container-fluid d-none d-sm-none d-md-block no-gutters">
 			<nav class="row navbar no-gutters">
@@ -172,6 +185,10 @@
 			</nav>
 		</div>
 
+<!-- Navbar - Large Screen - End -->
+
+<!-- Navbar - Large Screen - Start -->
+
 		<div class="container-fluid d-md-none">
 			<div class="row">
 				<div class="col-12 no-gutters">
@@ -196,12 +213,21 @@
 				</div>
 			</div>
 		</div>
+
+<!-- Navbar - Small Screen - End -->
+
 	</header>
 
 	<section>
+
+<!-- Main Section - Start -->
+
 		<div class="container no-gutters">
 			<div class="row no-gutters">
-				<div class="col-12 col-md-6 overview">
+				
+                <!-- Overview Section - Start -->
+                
+                <div class="col-12 col-md-6 overview">
 					<h1>Overview</h1>
 					<p>
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur	id mattis ante, vitae mattis risus. Vivamus eget nisl eget nisi	gravida facilisis scelerisque a augue. Duis sit amet lorem diam.
@@ -214,13 +240,16 @@
                         Vestibulum gravida, dui vitae dapibus facilisis, felis arcu ultrices lectus, vitae varius magna justo ut quam. Cras in odio efficitur, dapibus ligula ut, bibendum ex. Mauris lobortis ornare lorem, non commodo velit rutrum vitae. Fusce vitae ullamcorper sapien. In luctus velit commodo, malesuada urna eu, scelerisque.
                     </p>
 
+                        <!-- Timeline Button -->
+
 						<div class="center-timeline">
 							<button type="button" class="btn btn-timeline" data-toggle="modal" data-target=".bd-example-modal-lg">
                             Timeline
                             </button>
 						</div>
 
-						<!-- Modal -->
+						<!-- Timeline Modal -->
+
 						<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog"
 							aria-labelledby="exampleModalLabel" aria-hidden="true">
 							<div class="modal-dialog modal-lg">
@@ -239,12 +268,23 @@
 						</div>
 				</div>
 
+                <!-- Overview Section - End -->
+
+                <!-- Chart Section - Start -->
+
 				<div class="col-12 col-md-6 chartbox">
 					<h1>Benchmark Comparison</h1>
 					<div id="chart_div" style="width: 90%; height: 90%;" class="chart"></div>
 				</div>
+
+                <!-- Chart Section - End -->
+                
 			</div>
 		</div>
+
+<!-- Main Section - End -->
+
+<!-- Gallery Section - Start -->
 
 		<div class="gallery">
 
@@ -288,18 +328,29 @@
 				</div>
 			</div>
 		</div>
+
+<!-- Gallery Section - End -->
+
 	</section>
 
 	<footer>
+
 		<div class="container-fluid footer-container">
 	
 			<div class="row justify-content-center footerrow">
 	
+<!-- Footer - Map Button - Start -->
+
 				<div class="col-4 footer-col-map">
 					<button class="btn btn-map btn-sm" type="button" data-toggle="collapse" data-target="#collapseMap" aria-expanded="false" aria-controls="collapseMap">
 	                    Project Map
 	                </button>
 				</div>
+
+<!-- Footer - Map Button - End -->
+
+<!-- Footer - Weblinks - Start -->
+
 				<div class="col-4 footer-col-web">
 					<p>Websites:</p>
 					<a href="https://wembleypark.com/" target="_blank">
@@ -309,19 +360,27 @@
 							<img src="assets/images/logo-quintain-25px.png" alt="Quintain Corporate Website Link" title="Quintain Website">
 	                </a>
 				</div>
-				</div>
+
+<!-- Footer - Weblinks - End -->
+
+<!-- Footer - Map Dropdown - Start -->
+
 				<div class="col-10">
 					<div class="collapse" id="collapseMap">
 						<div class="card card-body map-box">
 							<div id="map"></div>
 						</div>
 					</div>
-	
 				</div>
+
+<!-- Footer - Map Dropdown - End -->
+
 			</div>
 		</div>
 	</footer>
 </body>
+
+<!-- Map Script and Formatting - Start -->
 
 <script>
 
@@ -554,5 +613,6 @@
 	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDVpHLcJ-9sjMpQu5v_RI_BRk1OGEU2RpA&callback=initMap">
 </script>
 
+<!-- Map Script and Formatting - End -->
 
 </html>
