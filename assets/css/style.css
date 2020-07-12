@@ -74,6 +74,14 @@ header {
     padding: 0; 
 }
 
+.active {
+    background-color: rgba(153, 137, 123, 0.308);
+}
+
+.active a {
+    font-weight: 800;
+}
+
 .menuitem {
     padding: 0;
     margin: 0;
@@ -85,18 +93,19 @@ header {
     z-index: 2;
 }
 
-.menuitem a:hover {
+
+.menuitem:hover > a {
     color: #ffffff;
+    font-weight: 400;
+}
+
+.menuitem a:hover {
     font-weight: 800;
     text-decoration: none;
 }
 
-.active {
-    background-color: rgba(153, 137, 123, 0.308);
-}
-
-.active a {
-    font-weight: 800;
+.menuitem-noimage:hover {
+    background-color: #4D4036;
 }
 
 .menuitem-project1 {
@@ -226,14 +235,14 @@ a.dropdown-item {
     margin: 15px auto;
     background-color: #7A9499;
     color: #2E474D;
-    border: 0px solid #7A9499;
+    border: 0;
     align-content: center;
 }
 
 .btn-timeline:hover { 
     background-color: #2E474D;
     color: #7A9499;
-    border: 0px solid white;
+    border: 0;
     box-shadow: 0 0 0 0;
 }
 
