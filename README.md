@@ -240,8 +240,6 @@ Screen Recorder used for creating videos (edited in Kapwing) of website features
 
 ## Testing
 
-**Testing is still to be undertaken**
-
 The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.
 
 * [W3C Markup Validator](https://validator.w3.org/)
@@ -258,13 +256,13 @@ There are 4 common errors and warnings highlighted from the validation.  These r
 
 There are no errors found on the validation service.
 
-### Further Testing
 
-**Testing is still to be undertaken**
+### Further Testing
 
 * The Website was tested on Google Chrome, Internet Explorer, Microsoft Edge and Safari browsers.
 * The website was viewed on a variety of devices such as Desktop, Laptop, iPhone 8 & iPhoneX.
 * A large amount of testing was done to ensure that all pages were linking correctly.
+
 
 ### Known Bugs
 
@@ -302,4 +300,10 @@ All Images are the ownership of Quintain, my employwer.
 
 ### Acknowledgements
 
-Thank you to my mentor for feedback and advice given throughout the project.
+Thank yous to:-
+
+*  My mentor for feedback and advice given throughout the project.
+
+*  Fellow Code Institute students who gave feedback as part of Peer Review:-
+    * Liga
+    * Simon Vardy

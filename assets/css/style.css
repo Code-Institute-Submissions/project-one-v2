@@ -93,12 +93,6 @@ header {
     z-index: 2;
 }
 
-
-.menuitem:hover > a {
-    color: #ffffff;
-    font-weight: 400;
-}
-
 .menuitem a:hover {
     font-weight: 800;
     text-decoration: none;
@@ -106,6 +100,16 @@ header {
 
 .menuitem-noimage:hover {
     background-color: #4D4036;
+    color: #ffffff;
+}
+
+.menuitem-noimage:hover > a {
+    color: #ffffff;
+    font-weight: 400;
+}
+
+.menuitem-noimage a:hover {
+    font-weight: 800;
 }
 
 .menuitem-project1 {
@@ -119,12 +123,25 @@ header {
     z-index: 1;
 }
 
-.menuitem:hover > .menuitem-project1 {
+/* .menuitem:hover > .menuitem-project1 {
+    animation-name: menu-hover;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+} */
+
+.menuitem a:hover {
+    color: #ffffff;
+    font-weight: 800;
+}
+
+.menuitem a:hover > .menuitem-project1 {
+    color: #ffffff;
+    font-weight: 800;
     animation-name: menu-hover;
     animation-duration: .5s;
     animation-fill-mode: forwards;
 }
-  
+
 @keyframes menu-hover {
     from {height: 0; width: 0; bottom: 0;}
     to {height: 200px; width: 200px; bottom: 100px;}
@@ -277,6 +294,8 @@ a.dropdown-item {
     margin: 0 auto;
     min-height: 200px
 }
+
+svg > g > g:last-child { pointer-events: none }
 
 /* ------------------------------------- Chart - End */
 
