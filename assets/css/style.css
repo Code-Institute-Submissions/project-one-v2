@@ -296,7 +296,7 @@ svg > g > g:last-child { pointer-events: none }
 /* ------------------------------------- Dashboard - Start*/
 
 .dashboard {
-    max-width: 90%;
+    max-width: 80%;
 }
 
 .dashboard-header h1 {
@@ -315,7 +315,7 @@ svg > g > g:last-child { pointer-events: none }
 
 .dashboard-boxes-background-top {
     position: relative;
-    max-width: 75%;
+    max-width: 85%;
     height: 45px;
     padding: 10px 0;
     background-color:rgba(148, 151, 159, 0.486);
@@ -325,7 +325,7 @@ svg > g > g:last-child { pointer-events: none }
 
 .dashboard-boxes-background-bottom {
     position: relative;
-    max-width: 75%;
+    max-width: 85%;
     height: 45px;
     padding: 10px 0;
     background-color: rgba(148, 151, 159, 0.486);
