@@ -81,7 +81,7 @@ The website will still be useable on portrait screen sizes at this size.  The we
 
 Use of Figma to develop key concepts into framework to commence web development.  Two pages were worked up, for desktop and mobile, in the knowledge that the basic page design would be replicated across the pages.
 
-A copy of the original wireframe can be found [HERE](README-attachments/Wireframe.pdf)
+A copy of the original wireframe can be found here: [Figma](https://www.figma.com/file/rbTyJlZNq6apXDVEMjG21f/Project-1?node-id=12%3A0) or [PDF](README-attachments/Wireframe.pdf)
 
 Whilst my wireframe did not incoproate the footer, I knew that I would likely want to add this at a later point.  The contents would be minimal and yet to be decided, as the would be subsidiary to the other information provided.
 
@@ -150,34 +150,40 @@ Included one for each project.  Purpose of these page is to provide further deta
     ![Navbar hover](/README-attachments/Navbar.gif)  
     As the project name may change over the lifetime of a project, some users who may not be aware of changes can easily identify the project from the image.
 
-2. **Timeline**
-    * On the overview, this project compares the project construction timelines
+2. **Overview / Project Overview**
+
+    These sections will provide the opportunity to give an overview of the Park and the Projects.  The content type may vary.  For the purposes of this project, I have chosen to utilise Lorem Ipsum to emphasise the fictional narrative of the project (rather than utilise fictional content which may be mistaken for true narrative!).
+
+3. **Timeline**
+    * On the overview, this project compares the project construction timelines.
     * On the Project pages, this provides additional timelines for the planning and design timelines. 
     * Durations were modified from default to Quarters, which is commonly used for measuring time in construction.  
     * Hovering over the bar provides the detailed date information and duration for ease of reference in the Tooltip.
     ![Timeline Snip](/README-attachments/Timeline.png "Timeline")  
 
-
-3. **Benchmark Comparison / Cost Breakdown**
+4. **Benchmark Comparison / Cost Breakdown**
     * The Overview page has a bar chart that compares the construciton costs on a £/sqft basis of each Project, and the average.  
     ![Bar Chart](/README-attachments/barchart.JPG "Bar Chart")
     * The pie chart on the Projects' pages show a breakdown of that cost into an elemental format.
     ![Pie Chart](/README-attachments/piechart.JPG "Pie Chart")
 
-4. **Gallery**
+5. **Dashboard** (Overview page only)
 
-    The gallery shows a selection of images from across the Park on the Overview, and of each building for the Projects.
+    The Dashboard shows key metrics from across the Park which relates to progress of the development.  
 
-5. **Footer**
+6. **Gallery** (Project pages only)
+
+    The gallery shows a selection of images of each building on the Projects of the website.
+
+7. **Footer**
 
    The footer contains:-
 
-   * Project Map - a map showing the locations of the Projects will drop down below the footer when activated.
-        <div style="height: 0; padding-bottom: calc(35.31% + 35px); position:relative; width: 100%;"><iframe allow="autoplay; gyroscope;" allowfullscreen height="100%" referrerpolicy="strict-origin" src="https://www.kapwing.com/e/5f0a1c4df828360015c7db75" style="border:0; height:100%; left:0; overflow:hidden; position:absolute; top:0; width:100%" title="Embedded content made with Kapwing" width="100%"></iframe></div>
+   * Project Map - a map showing the locations of the Projects will drop down below the footer when activated.  
+    ![Project Map Dropdown](/README-attachments/map-dropdown.gif "Project Map Dropdown")
    * Corporate website links - links to the Quintain website and Wembley Park websites are included in the footer.  The logos enlarge when the cursor hovers over:-  
    <img src="/README-attachments/footerWP.gif" height="40" width="40" alt="Wembley Park logo footer GIF">
    <img src="/README-attachments/footerQ.gif" height="40" width="40" alt="Quintain logo footer GIF">
-
 
 
 ### Features to Implement in the Future
@@ -208,7 +214,7 @@ Google fonts were used to import the 'Monserrat' font into the style.css file wh
 Google Charts was used for displaying data in graphical format, including timelines, bar charts and pie charts.
 
 * [Google Maps](https://www.google.co.uk/maps) including [Styling Wizard](https://mapstyle.withgoogle.com/)  
-Google Maps was used in the footer to provide locations for the Projects.  Functionaly of the maps was limited in terms of zoom, map type and points of interest to maintain a simple viewport of the Park and Project locations.  
+Google Maps was used in the footer to provide locations for the Projects.  Functionaly of the maps was limited in terms of zoom, map type and points of interest to maintain a simple viewport of the Park and Project locations only.  
 
 * [Popper.js](https://popper.js.org/)  
 Popper.js came with Bootstrap to make the popovers operation responsive.
@@ -250,7 +256,7 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
     * [Project 2](https://validator.w3.org/nu/?doc=https%3A%2F%2Fdkeddie.github.io%2Fproject-one%2Fproject2.html)
     * [Project 3](https://validator.w3.org/nu/?doc=https%3A%2F%2Fdkeddie.github.io%2Fproject-one%2Fproject3.html)
 
-There are 4 common errors and warnings highlighted from the validation.  These relate to the programmes / scripts used to import the Google Charts functionality into the website.  As the code has been copied from Google Charts, and not amended by myself, I have not attempted to rectify the issues flagged by the validation service, as they may alter the functionality of the scripts.
+There are 3 warnings common to all the pages which are highlighted from the validation.  These relate to the scripts used to import the Google Charts functionality into the website.  As the code has been copied from Google Charts, and not amended by myself, I have not attempted to rectify the issues flagged by the validation service, as they may alter the functionality of the scripts.
 
 * [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) - [Results](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fdkeddie.github.io%2Fproject-one%2Fassets%2Fcss%2Fstyle.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 
