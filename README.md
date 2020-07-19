@@ -152,7 +152,7 @@ Included one for each project.  Purpose of these page is to provide further deta
 
 2. **Overview / Project Overview**
 
-    These sections will provide the opportunity to give an overview of the Park and the Projects.  The content type may vary.  For the purposes of this project, I have chosen to utilise Lorem Ipsum to emphasise the fictional narrative of the project (rather than utilise fictional content which may be mistaken for true narrative!).
+    These sections will provide the opportunity to give an overview of the Park and the Projects.  The content type may vary.  For the purposes of this project, I have written fictional text.
 
 3. **Timeline**
     * On the overview, this project compares the project construction timelines.
