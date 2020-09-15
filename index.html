@@ -1,35 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
-<head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
 
-	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
-	</script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
 
-	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-	</script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
 
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-		integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
 
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-		integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
-	</script>
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
 
-	<link rel="stylesheet" href="assets/css/style.css" type="text/css" />
+    <!-- Google Chart - Bar Chart - Start -->
 
-	<!-- Google Chart - Bar Chart - Start -->
+    <script
+      type="text/javascript"
+      src="https://www.gstatic.com/charts/loader.js"
+    ></script>
+    <script type="text/javascript">
+      google.charts.load("current", { packages: ["corechart"] });
+      google.charts.setOnLoadCallback(drawVisualization);
 
-	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-	<script type="text/javascript">
-		google.charts.load("current", { packages: ["corechart"] });
-        google.charts.setOnLoadCallback(drawVisualization);
-
-        function drawVisualization() {
+      function drawVisualization() {
         // Some raw data (not necessarily accurate)
         var data = google.visualization.arrayToDataTable([
           ["Month", "£/sqft", "Ave. £/sqft"],
@@ -74,579 +89,628 @@
           color: "red",
         };
       }
-	</script>
+    </script>
 
-	<!-- Google Chart - Bar Chart - End -->
+    <!-- Google Chart - Bar Chart - End -->
 
-	<!-- Google Chart - Timeline - Start -->
+    <!-- Google Chart - Timeline - Start -->
 
-	<script type="text/javascript">
-		google.charts.load("current", {packages:["timeline"]});
-        google.charts.setOnLoadCallback(drawChart);
-        function drawChart() {
-        var container = document.getElementById('timeline_overview');
+    <script type="text/javascript">
+      google.charts.load("current", { packages: ["timeline"] });
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var container = document.getElementById("timeline_overview");
         var chart = new google.visualization.Timeline(container);
         var dataTable = new google.visualization.DataTable();
-        dataTable.addColumn({ type: 'string', id: 'Activity' });
-        dataTable.addColumn({ type: 'string', id: 'Stage' });
-        dataTable.addColumn({ type: 'date', id: 'Start' });
-        dataTable.addColumn({ type: 'date', id: 'End' });
+        dataTable.addColumn({ type: "string", id: "Activity" });
+        dataTable.addColumn({ type: "string", id: "Stage" });
+        dataTable.addColumn({ type: "date", id: "Start" });
+        dataTable.addColumn({ type: "date", id: "End" });
         dataTable.addRows([
-        ['Construction', 'Project 1', new Date(2013, 5), new Date(2016, 2) ],
-        ['Construction', 'Project 2', new Date(2014, 2), new Date(2017, 6) ],
-        ['Construction', 'Project 3', new Date(2014, 10), new Date(2017, 9) ]]);
+          ["Construction", "Project 1", new Date(2013, 5), new Date(2016, 2)],
+          ["Construction", "Project 2", new Date(2014, 2), new Date(2017, 6)],
+          ["Construction", "Project 3", new Date(2014, 10), new Date(2017, 9)],
+        ]);
 
         var options = {
-            timeline: { 
-                showRowLabels: false,
-                barLabelStyle: {fontName: 'Montserrat', fontSize: '15'},
+          timeline: {
+            showRowLabels: false,
+            barLabelStyle: { fontName: "Montserrat", fontSize: "15" },
+          },
+          hAxis: {
+            minValue: new Date(2013, 3),
+            format: "QQ YYY",
+            gridlines: {
+              count: -1,
             },
-            hAxis: {
-                minValue: new Date(2013, 3),
-                format: "QQ YYY",
-                gridlines: {
-                    count: -1,
-                }
-                },
-            colors: ['#99897B', '#4D4036', '#7A9499'],
-            width: 740,
-            height: 200,
-            fontName: 'Montserrat'
-            };
+          },
+          colors: ["#99897B", "#4D4036", "#7A9499"],
+          width: 740,
+          height: 200,
+          fontName: "Montserrat",
+        };
 
         chart.draw(dataTable, options);
-        }
-	</script>
+      }
+    </script>
 
-	<!-- Google Chart - Timeline - End -->
+    <!-- Google Chart - Timeline - End -->
 
-	<!-- Map Script and Formatting - Start -->
+    <!-- Map Script and Formatting - Start -->
 
-	<script>
-		var labels = '123456789';
-        var labelIndex = 0;
+    <script>
+      var labels = "123456789";
+      var labelIndex = 0;
 
-        function initMap() {
-        var wembleypark = {lat: 51.55952122707162, lng: -0.2796339857052112};
-        var project1 = {lat: 51.557413441145606, lng: -0.28142568065666623};
-        var project2 = {lat: 51.55510569541343, lng: -0.28358689973511564};
-        var project3 = {lat: 51.55802377529137, lng: -0.2764046434226198};
-        
-        var map = new google.maps.Map(
-            document.getElementById('map'), {
-                zoom: 14.5, 
-                center: wembleypark,
-                streetViewControl: false,
-                zoomControl: false,
-                myTypeControl: false,
-                mapTypeControl: false,
-                fullscreenControl: false,
-                mapTypeId: "roadmap",
-                styles: [
-                        {
-                            "elementType": "geometry",
-                            "stylers": [
-                            {
-                                "color": "#f5f5f5"
-                            }
-                            ]
-                        },
-                        {
-                            "elementType": "labels.icon",
-                            "stylers": [
-                            {
-                                "visibility": "off"
-                            }
-                            ]
-                        },
-                        {
-                            "elementType": "labels.text.fill",
-                            "stylers": [
-                            {
-                                "color": "#616161"
-                            }
-                            ]
-                        },
-                        {
-                            "elementType": "labels.text.stroke",
-                            "stylers": [
-                            {
-                                "color": "#f5f5f5"
-                            }
-                            ]
-                        },
-                        {
-                            "featureType": "administrative.land_parcel",
-                            "elementType": "labels.text.fill",
-                            "stylers": [
-                            {
-                                "color": "#bdbdbd"
-                            }
-                            ]
-                        },
-                        {
-                            "featureType": "poi",
-                            "elementType": "geometry",
-                            "stylers": [
-                            {
-                                "color": "#eeeeee"
-                            }
-                            ]
-                        },
-                        {
-                            "featureType": "poi",
-                            "elementType": "labels.text",
-                            "stylers": [
-                            {
-                                "visibility": "off"
-                            }
-                            ]
-                        },
-                        {
-                            "featureType": "poi",
-                            "elementType": "labels.text.fill",
-                            "stylers": [
-                            {
-                                "color": "#757575"
-                            }
-                            ]
-                        },
-                        {
-                            "featureType": "poi.business",
-                            "stylers": [
-                            {
-                                "visibility": "off"
-                            }
-                            ]
-                        },
-                        {
-                            "featureType": "poi.park",
-                            "elementType": "geometry",
-                            "stylers": [
-                            {
-                                "color": "#e5e5e5"
-                            }
-                            ]
-                        },
-                        {
-                            "featureType": "poi.park",
-                            "elementType": "labels.text.fill",
-                            "stylers": [
-                            {
-                                "color": "#9e9e9e"
-                            }
-                            ]
-                        },
-                        {
-                            "featureType": "road",
-                            "elementType": "geometry",
-                            "stylers": [
-                            {
-                                "color": "#ffffff"
-                            }
-                            ]
-                        },
-                        {
-                            "featureType": "road",
-                            "elementType": "labels.icon",
-                            "stylers": [
-                            {
-                                "visibility": "off"
-                            }
-                            ]
-                        },
-                        {
-                            "featureType": "road.arterial",
-                            "elementType": "labels.text.fill",
-                            "stylers": [
-                            {
-                                "color": "#757575"
-                            }
-                            ]
-                        },
-                        {
-                            "featureType": "road.highway",
-                            "elementType": "geometry",
-                            "stylers": [
-                            {
-                                "color": "#dadada"
-                            }
-                            ]
-                        },
-                        {
-                            "featureType": "road.highway",
-                            "elementType": "labels.text.fill",
-                            "stylers": [
-                            {
-                                "color": "#616161"
-                            }
-                            ]
-                        },
-                        {
-                            "featureType": "road.local",
-                            "elementType": "labels.text.fill",
-                            "stylers": [
-                            {
-                                "color": "#9e9e9e"
-                            }
-                            ]
-                        },
-                        {
-                            "featureType": "transit",
-                            "stylers": [
-                            {
-                                "visibility": "on"
-                            }
-                            ]
-                        },
-                        {
-                            "featureType": "transit.line",
-                            "elementType": "geometry",
-                            "stylers": [
-                            {
-                                "color": "#e5e5e5"
-                            }
-                            ]
-                        },
-                        {
-                            "featureType": "transit.station",
-                            "elementType": "geometry",
-                            "stylers": [
-                            {
-                                "color": "#eeeeee"
-                            }
-                            ]
-                        },
-                        {
-                            "featureType": "water",
-                            "elementType": "geometry",
-                            "stylers": [
-                            {
-                                "color": "#c9c9c9"
-                            }
-                            ]
-                        },
-                        {
-                            "featureType": "water",
-                            "elementType": "labels.text.fill",
-                            "stylers": [
-                            {
-                                "color": "#9e9e9e"
-                            }
-                            ]
-                        }
-                        ]
+      function initMap() {
+        var wembleypark = { lat: 51.55952122707162, lng: -0.2796339857052112 };
+        var project1 = { lat: 51.557413441145606, lng: -0.28142568065666623 };
+        var project2 = { lat: 51.55510569541343, lng: -0.28358689973511564 };
+        var project3 = { lat: 51.55802377529137, lng: -0.2764046434226198 };
 
-            });
-            
+        var map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 14.5,
+          center: wembleypark,
+          streetViewControl: false,
+          zoomControl: false,
+          myTypeControl: false,
+          mapTypeControl: false,
+          fullscreenControl: false,
+          mapTypeId: "roadmap",
+          styles: [
+            {
+              elementType: "geometry",
+              stylers: [
+                {
+                  color: "#f5f5f5",
+                },
+              ],
+            },
+            {
+              elementType: "labels.icon",
+              stylers: [
+                {
+                  visibility: "off",
+                },
+              ],
+            },
+            {
+              elementType: "labels.text.fill",
+              stylers: [
+                {
+                  color: "#616161",
+                },
+              ],
+            },
+            {
+              elementType: "labels.text.stroke",
+              stylers: [
+                {
+                  color: "#f5f5f5",
+                },
+              ],
+            },
+            {
+              featureType: "administrative.land_parcel",
+              elementType: "labels.text.fill",
+              stylers: [
+                {
+                  color: "#bdbdbd",
+                },
+              ],
+            },
+            {
+              featureType: "poi",
+              elementType: "geometry",
+              stylers: [
+                {
+                  color: "#eeeeee",
+                },
+              ],
+            },
+            {
+              featureType: "poi",
+              elementType: "labels.text",
+              stylers: [
+                {
+                  visibility: "off",
+                },
+              ],
+            },
+            {
+              featureType: "poi",
+              elementType: "labels.text.fill",
+              stylers: [
+                {
+                  color: "#757575",
+                },
+              ],
+            },
+            {
+              featureType: "poi.business",
+              stylers: [
+                {
+                  visibility: "off",
+                },
+              ],
+            },
+            {
+              featureType: "poi.park",
+              elementType: "geometry",
+              stylers: [
+                {
+                  color: "#e5e5e5",
+                },
+              ],
+            },
+            {
+              featureType: "poi.park",
+              elementType: "labels.text.fill",
+              stylers: [
+                {
+                  color: "#9e9e9e",
+                },
+              ],
+            },
+            {
+              featureType: "road",
+              elementType: "geometry",
+              stylers: [
+                {
+                  color: "#ffffff",
+                },
+              ],
+            },
+            {
+              featureType: "road",
+              elementType: "labels.icon",
+              stylers: [
+                {
+                  visibility: "off",
+                },
+              ],
+            },
+            {
+              featureType: "road.arterial",
+              elementType: "labels.text.fill",
+              stylers: [
+                {
+                  color: "#757575",
+                },
+              ],
+            },
+            {
+              featureType: "road.highway",
+              elementType: "geometry",
+              stylers: [
+                {
+                  color: "#dadada",
+                },
+              ],
+            },
+            {
+              featureType: "road.highway",
+              elementType: "labels.text.fill",
+              stylers: [
+                {
+                  color: "#616161",
+                },
+              ],
+            },
+            {
+              featureType: "road.local",
+              elementType: "labels.text.fill",
+              stylers: [
+                {
+                  color: "#9e9e9e",
+                },
+              ],
+            },
+            {
+              featureType: "transit",
+              stylers: [
+                {
+                  visibility: "on",
+                },
+              ],
+            },
+            {
+              featureType: "transit.line",
+              elementType: "geometry",
+              stylers: [
+                {
+                  color: "#e5e5e5",
+                },
+              ],
+            },
+            {
+              featureType: "transit.station",
+              elementType: "geometry",
+              stylers: [
+                {
+                  color: "#eeeeee",
+                },
+              ],
+            },
+            {
+              featureType: "water",
+              elementType: "geometry",
+              stylers: [
+                {
+                  color: "#c9c9c9",
+                },
+              ],
+            },
+            {
+              featureType: "water",
+              elementType: "labels.text.fill",
+              stylers: [
+                {
+                  color: "#9e9e9e",
+                },
+              ],
+            },
+          ],
+        });
+
         // The marker, positioned at Uluru
-        var marker = new google.maps.Marker({position: project1, label: labels[labelIndex++ % labels.length], map: map});
-        var marker = new google.maps.Marker({position: project2, label: labels[labelIndex++ % labels.length], map: map});
-        var marker = new google.maps.Marker({position: project3, label: labels[labelIndex++ % labels.length], map: map});
+        var marker = new google.maps.Marker({
+          position: project1,
+          label: labels[labelIndex++ % labels.length],
+          map: map,
+        });
+        var marker = new google.maps.Marker({
+          position: project2,
+          label: labels[labelIndex++ % labels.length],
+          map: map,
+        });
+        var marker = new google.maps.Marker({
+          position: project3,
+          label: labels[labelIndex++ % labels.length],
+          map: map,
+        });
+      }
+    </script>
 
-        }
+    <script
+      async
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDVpHLcJ-9sjMpQu5v_RI_BRk1OGEU2RpA&callback=initMap"
+    ></script>
 
-	</script>
+    <!-- Map Script and Formatting - End -->
 
-	<script async defer
-		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDVpHLcJ-9sjMpQu5v_RI_BRk1OGEU2RpA&callback=initMap">
-	</script>
+    <title>WP - Overview</title>
+  </head>
 
-	<!-- Map Script and Formatting - End -->
+  <body>
+    <!-- Logo Banner - Start -->
 
-	<title>WP - Overview</title>
+    <header>
+      <div class="container-fluid container-logo no-gutters">
+        <div class="row justify-content-center banner-logo no-gutters">
+          <div class="col-12 col-md-6 logo-quintain justify-content-center">
+            <img src="assets/images/logo-quintain.png" alt="Quintain Logo" />
+          </div>
+          <div class="col-12 col-md logo-wp no-gutters justify-content-center">
+            <img src="assets/images/logo-wp.jpg" alt="Wembley Park Logo" />
+          </div>
+        </div>
+      </div>
 
-</head>
+      <!-- Logo Banner - End -->
 
-<body>
+      <!-- Navbar - Large Screen - Start -->
 
-	<!-- Logo Banner - Start -->
+      <div class="container-fluid d-none d-sm-none d-md-block no-gutters">
+        <nav class="row navbar no-gutters">
+          <div class="col no gutters">
+            <ul id="nav" class="list-inline menucontainer">
+              <li
+                class="col-md-3 list-inline-item menuitem menuitem-noimage active"
+              >
+                <a href="index.html">Overview</a>
+              </li>
 
-	<header>
-		<div class="container-fluid container-logo no-gutters">
-			<div class="row justify-content-center banner-logo no-gutters">
-				<div class="col-12 col-md-6 logo-quintain justify-content-center">
-					<img src="assets/images/logo-quintain.png" alt="Quintain Logo">
+              <li class="col-md-3 list-inline-item menuitem">
+                <a href="project1.html">
+                  Project 1
+                  <img
+                    src="assets/images/P1_thumb.png"
+                    alt="Project 1 Image"
+                    height="150"
+                    class="menuitem-project1"
+                  />
+                </a>
+              </li>
+
+              <li class="col-md-3 list-inline-item menuitem">
+                <a href="project2.html"
+                  >Project 2
+                  <img
+                    src="assets/images/P2_thumb.png"
+                    alt="Project 2 Image"
+                    height="150"
+                    class="menuitem-project1"
+                  />
+                </a>
+              </li>
+
+              <li class="col-md-3 list-inline-item menuitem">
+                <a href="project3.html"
+                  >Project 3
+                  <img
+                    src="assets/images/P3_thumb.png"
+                    alt="Project 3 Image"
+                    height="150"
+                    class="menuitem-project1"
+                  />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+      <!-- Navbar - Large Screen - End -->
+
+      <!-- Navbar - Small Screen - Start -->
+
+      <div class="container-fluid d-md-none">
+        <div class="row">
+          <div class="col-12 no-gutters">
+            <div class="dropdown">
+              <button
+                class="btn btn-nav dropdown-toggle btn-block"
+                type="button"
+                id="dropdownMenuButton"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Menu
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="index.html">Overview</a>
+                <a class="dropdown-item" href="project1.html">Project 1</a>
+                <a class="dropdown-item" href="project2.html">Project 2</a>
+                <a class="dropdown-item" href="project3.html">Project 3</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Navbar - Small Screen - End -->
+    </header>
+
+    <section>
+      <!-- Main Section - Start -->
+
+      <div class="container no-gutters">
+        <div class="row no-gutters">
+          <!-- Overview Section - Start -->
+
+          <div class="col-12 col-md-6 overview">
+            <h1>Overview</h1>
+            <p>
+              Wembley Park, the home of Football, in undergoing a
+              transformation. The land surrounding the iconomic stadium is
+              becoming a new home for London and a retail and cultural
+              destination for its visitors.
+              <br />
+              <br />
+              This website will provides Benchmark information in the on-going
+              development of the Park. Currently there are three Projects which
+              have either been completed or are under-going construction.
+              <br />
+              <br />
+              This Overview page combines key metrics on programme and cost from
+              each of the projects, to enable users to see metrics side-by-side.
+              Each project page provides further breakdown of these metrics, as
+              well as a Gallery of project images.
+              <br />
+              <br />
+              (Information on this page and the following is fictional and,
+              other than the the names Quintain and Wembley Park, all
+              information is fictional for the purposes of the Project.)
+              <!-- Timeline Button -->
+            </p>
+
+            <div class="center-timeline">
+              <button
+                type="button"
+                class="btn btn-timeline"
+                data-toggle="modal"
+                data-target=".bd-example-modal-lg"
+              >
+                Timeline
+              </button>
+            </div>
+
+            <!-- Timeline Modal -->
+
+            <div
+              class="modal fade bd-example-modal-lg"
+              tabindex="-1"
+              role="dialog"
+              aria-labelledby="exampleModalLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">
+                      Construction Durations
+                    </h5>
+                    <button
+                      type="button"
+                      class="close"
+                      data-dismiss="modal"
+                      aria-label="Close"
+                    >
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <div id="timeline_overview"></div>
+                  </div>
                 </div>
-					<div class="col-12 col-md logo-wp no-gutters justify-content-center">
-						<img src="assets/images/logo-wp.jpg" alt="Wembley Park Logo">
-                </div>
-					</div>
-				</div>
+              </div>
+            </div>
+          </div>
 
-				<!-- Logo Banner - End -->
+          <!-- Overview Section - End -->
 
-				<!-- Navbar - Large Screen - Start -->
+          <!-- Chart Section - Start -->
 
-				<div class="container-fluid d-none d-sm-none d-md-block no-gutters">
-					<nav class="row navbar no-gutters">
-						<div class="col no gutters">
-							<ul id="nav" class="list-inline menucontainer">
-								<li class="col-md-3 list-inline-item menuitem menuitem-noimage active">
-									<a href="index.html">Overview</a>
-								</li>
+          <div class="col-12 col-md-6 chartbox">
+            <h1>Benchmark Comparison</h1>
+            <div
+              id="chart_div"
+              style="width: 90%; height: 90%;"
+              class="chart"
+            ></div>
+          </div>
 
-								<li class="col-md-3 list-inline-item menuitem">
-									<a href="project1.html"> Project 1
-										<img
-                            src="assets/images/P1_thumb.png"
-                            alt="Project 1 Image"
-                            height="150"
-                            class="menuitem-project1"/>
-                        </a>
-								</li>
+          <!-- Chart Section - End -->
+        </div>
+      </div>
 
-								<li class="col-md-3 list-inline-item menuitem">
-									<a href="project2.html">Project 2
-										<img
-                                src="assets/images/P2_thumb.png"
-                                alt="Project 2 Image"
-                                height="150"
-                                class="menuitem-project1"/>
-                            </a>
-								</li>
+      <!-- Main Section - End -->
 
-								<li class="col-md-3 list-inline-item menuitem">
-									<a href="project3.html">Project 3
-										<img
-                                src="assets/images/P3_thumb.png"
-                                alt="Project 3 Image"
-                                height="150"
-                                class="menuitem-project1"/>
-                            </a>
-								</li>
-							</ul>
-						</div>
-					</nav>
-				</div>
+      <!-- Dashboard Section - Start -->
 
-				<!-- Navbar - Large Screen - End -->
+      <div class="container dashboard no-gutters">
+        <div class="row no-gutters justify-content-center">
+          <div class="col-12 justify-content-center dashboard-header">
+            <h1>Dashboard</h1>
+          </div>
 
-				<!-- Navbar - Small Screen - Start -->
+          <div class="col-6 col-md-3 dashboard-boxes">
+            <div class="dashboard-boxes-background-top">
+              <h4>Programme</h4>
+            </div>
+            <div class="dashboard-boxes-background-bottom">
+              <h5>-2 weeks</h5>
+            </div>
+          </div>
+          <div class="col-6 col-md-3 dashboard-boxes">
+            <div class="dashboard-boxes-background-top">
+              <h4>Cost v. Budget</h4>
+            </div>
+            <div class="dashboard-boxes-background-bottom">
+              <h5>+£500k</h5>
+            </div>
+          </div>
+          <div class="col-6 col-md-3 dashboard-boxes">
+            <div class="dashboard-boxes-background-top">
+              <h4>Units Completed</h4>
+            </div>
+            <div class="dashboard-boxes-background-bottom">
+              <h5>800</h5>
+            </div>
+          </div>
+          <div class="col-6 col-md-3 dashboard-boxes">
+            <div class="dashboard-boxes-background-top">
+              <h4>Units let to date</h4>
+            </div>
+            <div class="dashboard-boxes-background-bottom">
+              <h5>650 units</h5>
+            </div>
+          </div>
+          <div class="col-6 col-md-3 dashboard-boxes">
+            <div class="dashboard-boxes-background-top">
+              <h4>New Planning Applications</h4>
+            </div>
+            <div class="dashboard-boxes-background-bottom">
+              <h5>3 new sites</h5>
+            </div>
+          </div>
+          <div class="col-6 col-md-3 dashboard-boxes">
+            <div class="dashboard-boxes-background-top">
+              <h4>Planned Units</h4>
+            </div>
+            <div class="dashboard-boxes-background-bottom">
+              <h5>1,500</h5>
+            </div>
+          </div>
+          <div class="col-6 col-md-3 dashboard-boxes">
+            <div class="dashboard-boxes-background-top">
+              <h4>Resident Satisfaction</h4>
+            </div>
+            <div class="dashboard-boxes-background-bottom">
+              <h5>95%</h5>
+            </div>
+          </div>
+          <div class="col-6 col-md-3 dashboard-boxes">
+            <div class="dashboard-boxes-background-top">
+              <h4>ROI</h4>
+            </div>
+            <div class="dashboard-boxes-background-bottom">
+              <h5>7%</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Dashboard Section - End -->
+    </section>
 
-				<div class="container-fluid d-md-none">
-					<div class="row">
-						<div class="col-12 no-gutters">
-							<div class="dropdown">
-								<button
-                            class="btn btn-nav dropdown-toggle btn-block"
-                            type="button"
-                            id="dropdownMenuButton"
-                            data-toggle="dropdown"
-                            aria-haspopup="true"
-                            aria-expanded="false"
-                        >
-                        Menu
-                        </button>
-								<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-									<a class="dropdown-item" href="index.html">Overview</a>
-									<a class="dropdown-item" href="project1.html">Project 1</a>
-									<a class="dropdown-item" href="project2.html">Project 2</a>
-									<a class="dropdown-item" href="project3.html">Project 3</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+    <footer>
+      <div class="container-fluid footer-container">
+        <div class="row justify-content-center footerrow">
+          <!-- Footer - Map Button - Start -->
 
-				<!-- Navbar - Small Screen - End -->
+          <div class="col-4 footer-col-map">
+            <button
+              class="btn btn-map btn-sm"
+              type="button"
+              data-toggle="collapse"
+              data-target="#collapseMap"
+              aria-expanded="false"
+              aria-controls="collapseMap"
+            >
+              Project Map
+            </button>
+          </div>
 
-	</header>
+          <!-- Footer - Map Button - End -->
 
-	<section>
+          <!-- Footer - Weblinks - Start -->
 
-		<!-- Main Section - Start -->
+          <div class="col-4 footer-col-web">
+            <p>Websites:</p>
+            <a href="https://wembleypark.com/" target="_blank">
+              <img
+                src="assets/images/logo-wp-25px.png"
+                alt="Wembley Park Corporate Website Link"
+                title="Wembley Park Website"
+              />
+            </a>
+            <a href="https://www.quintain.co.uk/" target="_blank">
+              <img
+                src="assets/images/logo-quintain-25px.png"
+                alt="Quintain Corporate Website Link"
+                title="Quintain Website"
+              />
+            </a>
+          </div>
 
-		<div class="container no-gutters">
-			<div class="row no-gutters">
+          <!-- Footer - Weblinks - End -->
 
-				<!-- Overview Section - Start -->
+          <!-- Footer - Map Dropdown - Start -->
 
-				<div class="col-12 col-md-6 overview">
-					<h1>Overview</h1>
-					<p>
-						Wembley Park, the home of Football, in undergoing a transformation. The land surrounding the
-						iconomic stadium is becoming a new home for London and a retail and cultural destination for its
-						visitors.
-						<br />
-						<br />
-                        This website will provides Benchmark information in the on-going development of the Park.  Currently there are three Projects which have either been completed or are under-going construction.
-						<br />
-						<br />
-                        This Overview page combines key metrics on programme and cost from each of the projects, to enable users to see metrics side-by-side.  Each project page provides further breakdown of these metrics, as well as a Gallery of project images.
-						<br />
-						<br />
-                        (Information on this page and the following is fictional and, other than the the names Quintain and Wembley Park, all information is fictional for the purposes of the Project.)
-						<!-- Timeline Button -->
+          <div class="col-10">
+            <div class="collapse" id="collapseMap">
+              <div class="card card-body map-box">
+                <div id="map"></div>
+              </div>
+            </div>
+          </div>
 
-						<div class="center-timeline">
-							<button type="button" class="btn btn-timeline" data-toggle="modal" data-target=".bd-example-modal-lg">
-                            Timeline
-                            </button>
-						</div>
-
-						<!-- Timeline Modal -->
-
-						<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog"
-							aria-labelledby="exampleModalLabel" aria-hidden="true">
-							<div class="modal-dialog modal-lg">
-								<div class="modal-content">
-									<div class="modal-header">
-										<h5 class="modal-title" id="exampleModalLabel">Construction Durations</h5>
-										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-									</div>
-									<div class="modal-body">
-										<div id="timeline_overview"></div>
-									</div>
-								</div>
-							</div>
-						</div>
-				</div>
-
-				<!-- Overview Section - End -->
-
-				<!-- Chart Section - Start -->
-
-				<div class="col-12 col-md-6 chartbox">
-					<h1>Benchmark Comparison</h1>
-					<div id="chart_div" style="width: 90%; height: 90%;" class="chart"></div>
-				</div>
-
-				<!-- Chart Section - End -->
-
-			</div>
-		</div>
-
-		<!-- Main Section - End -->
-
-		<!-- Dashboard Section - Start -->
-
-		<div class="container dashboard no-gutters">
-			<div class="row no-gutters justify-content-center">
-
-				<div class="col-12 justify-content-center dashboard-header">
-					<h1>Dashboard</h1>
-				</div>
-
-				<div class="col-6 col-md-3 dashboard-boxes">
-					<div class="dashboard-boxes-background-top">
-						<h4>Programme</h4>
-					</div>
-					<div class="dashboard-boxes-background-bottom">
-						<h5>-2 weeks</h5>
-					</div>
-				</div>
-				<div class="col-6 col-md-3 dashboard-boxes">
-					<div class="dashboard-boxes-background-top">
-						<h4>Cost v. Budget</h4>
-					</div>
-					<div class="dashboard-boxes-background-bottom">
-						<h5>+£500k</h5>
-					</div>
-				</div>
-				<div class="col-6 col-md-3 dashboard-boxes">
-					<div class="dashboard-boxes-background-top">
-						<h4>Units Completed</h4>
-					</div>
-					<div class="dashboard-boxes-background-bottom">
-						<h5>800</h5>
-					</div>
-				</div>
-				<div class="col-6 col-md-3 dashboard-boxes">
-					<div class="dashboard-boxes-background-top">
-						<h4>Units let to date</h4>
-					</div>
-					<div class="dashboard-boxes-background-bottom">
-						<h5>650 units</h5>
-					</div>
-				</div>
-				<div class="col-6 col-md-3 dashboard-boxes">
-					<div class="dashboard-boxes-background-top">
-						<h4>New Planning Applications</h4>
-					</div>
-					<div class="dashboard-boxes-background-bottom">
-						<h5>3 new sites</h5>
-					</div>
-				</div>
-				<div class="col-6 col-md-3 dashboard-boxes">
-					<div class="dashboard-boxes-background-top">
-						<h4>Planned Units</h4>
-					</div>
-					<div class="dashboard-boxes-background-bottom">
-						<h5>1,500</h5>
-					</div>
-				</div>
-				<div class="col-6 col-md-3 dashboard-boxes">
-					<div class="dashboard-boxes-background-top">
-						<h4>Resident Satisfaction</h4>
-					</div>
-					<div class="dashboard-boxes-background-bottom">
-						<h5>95%</h5>
-					</div>
-				</div>
-				<div class="col-6 col-md-3 dashboard-boxes">
-					<div class="dashboard-boxes-background-top">
-						<h4>ROI</h4>
-					</div>
-					<div class="dashboard-boxes-background-bottom">
-						<h5>7%</h5>
-					</div>
-				</div>
-			</div>
-
-		</div>
-		<!-- Dashboard Section - End -->
-
-	</section>
-
-	<footer>
-
-		<div class="container-fluid footer-container">
-
-			<div class="row justify-content-center footerrow">
-
-				<!-- Footer - Map Button - Start -->
-
-				<div class="col-4 footer-col-map">
-					<button class="btn btn-map btn-sm" type="button" data-toggle="collapse" data-target="#collapseMap" aria-expanded="false" aria-controls="collapseMap">
-	                    Project Map
-	                </button>
-				</div>
-
-				<!-- Footer - Map Button - End -->
-
-				<!-- Footer - Weblinks - Start -->
-
-				<div class="col-4 footer-col-web">
-					<p>Websites:</p>
-					<a href="https://wembleypark.com/" target="_blank">
-						<img src="assets/images/logo-wp-25px.png" alt="Wembley Park Corporate Website Link" title="Wembley Park Website">
-	                </a>
-						<a href="https://www.quintain.co.uk/" target="_blank">
-							<img src="assets/images/logo-quintain-25px.png" alt="Quintain Corporate Website Link" title="Quintain Website">
-	                </a>
-				</div>
-
-				<!-- Footer - Weblinks - End -->
-
-				<!-- Footer - Map Dropdown - Start -->
-
-				<div class="col-10">
-					<div class="collapse" id="collapseMap">
-						<div class="card card-body map-box">
-							<div id="map"></div>
-						</div>
-					</div>
-				</div>
-
-				<!-- Footer - Map Dropdown - End -->
-
-			</div>
-		</div>
-	</footer>
-</body>
-
-
+          <!-- Footer - Map Dropdown - End -->
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
