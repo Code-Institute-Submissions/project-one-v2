@@ -269,6 +269,22 @@ There are no errors found on the validation service.
 * The website was viewed on a variety of devices such as Desktop, Laptop, iPhone 8 & iPhoneX.
 * A large amount of testing was done to ensure that all pages were linking correctly.
 
+### User Story Feedback
+
+Responding to the User Story, I believe this website has started to address the conclusions outlined.  Taking each point in turn:-
+
+* High level cost information is now available to clients with access to the site.  They do not require to store the data themselves, as it will be maintained and made available by their QS at all times.
+
+* Information is now able to be maintained and made available online at all times.  By default, the information will bepresented in a standard format, making comparison and understanding easier by a frequent user of the website.
+
+* By implementing an online platform for Client users to access the information, this will mean that there is both a necessity by the QS to collate, maintain and update data, and demand by the Client user for that information to be so.  There will be a requirement to be proactive rather than reactive to maintain record information.
+
+* There should no timelag to providing historic information for clients, who can access the data themselves.  Albeit, if data has just been received, then it may still require input and there may be a short delay for the newest information to be uploaded.
+
+* Delivery of information will no longer be rushed, and will now be available on demand in a standard format.  Accuracy should be enhanced through standardisation and collation into a central location that is regularly maintained.
+
+Consequently, the website should be a useful tool for both the QS to store and maintain key information, as well as for clients who reqularly request this kind of information.  Not only will the information be available on demand, but the information should be more readily understood and seen in a consistent, highly professional format.
+
 
 ### Known Bugs
 
