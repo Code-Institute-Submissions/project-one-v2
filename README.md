@@ -301,13 +301,35 @@ The development of the website has been undertaken on Gitpod.
 
 The steps from start to present were:-
 
-    1.Creation of repository on GitHub, utilising Code Institute template.
-    2. Launch of repository on Gitpod.
-    3. Utilise Git to push content back to GitHub.  This was undertaken at regular intervals throughout the development of the website.
-    4. Deployment of the webpage was implemented by
-        - Going to the 'Settings' of the repository,
-        - Scrolling to 'GitHub Pages' section,
-        - Selecting 'master branch' of the Source dropdown menu
+1. Creation of repository on GitHub, utilising Code Institute template.
+
+2. Launch of repository on Gitpod.
+
+3. Utilise Git to push content back to GitHub.  This was undertaken at regular intervals throughout the development of the website.
+
+4. Deployment of the webpage was implemented by
+    * Going to the 'Settings' of the repository,
+    * Scrolling to 'GitHub Pages' section,
+    * Selecting 'master branch' of the Source dropdown menu
+        
+The website is now deployed and can be viewed at:
+    [https://dkeddie.github.io/project-one-v2/](https://dkeddie.github.io/project-one-v2/index.html)
+
+## Deployment of a Clone
+
+Should you wish to deploy your own version of the website, the following steps may be followed to host your own version on GitHub:-
+
+1. Visit my GitHub Repository: [project-one-v2](https://github.com/dkeddie/project-one-v2)
+
+2. Click dropdown 'Code' and copy url to 'Clone with HTTPS'  
+![Clone](README-attachments/clone.png)
+
+3. Select 'Import Repository' from the Menu dropdown, paste the url, give your new repository a name and click 'Begin Import'
+![Clone instructions](README-attachments/clone2.png)
+
+4. Go to your new Repository.  You may chose to launch the repository in an IDE of your chosing in order to make changes to the website, and customise it to your requirements.
+
+5. To deploy the website, follow step 4 of the **Deployment** section immediately above.
 
 
 ## Credits
