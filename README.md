@@ -213,7 +213,7 @@ Google fonts were used to import the 'Monserrat' font into the style.css file wh
 * [Google Charts](https://developers.google.com/chart/)  
 Google Charts was used for displaying data in graphical format, including timelines, bar charts and pie charts.
 
-* [Google Maps](https://www.google.co.uk/maps) including [Styling Wizard](https://mapstyle.withgoogle.com/)  
+* [Google Maps Javascript API](https://developers.google.com/maps/documentation/javascript/overview) including [Styling Wizard](https://mapstyle.withgoogle.com/)  
 Google Maps was used in the footer to provide locations for the Projects.  Functionaly of the maps was limited in terms of zoom, map type and points of interest to maintain a simple viewport of the Park and Project locations only.  
 
 * [Popper.js](https://popper.js.org/)  
