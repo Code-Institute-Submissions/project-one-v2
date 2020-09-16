@@ -275,7 +275,7 @@ Responding to the User Story, I believe this website has started to address the 
 
 * High level cost information is now available to clients with access to the site.  They do not require to store the data themselves, as it will be maintained and made available by their QS at all times.
 
-* Information is now able to be maintained and made available online at all times.  By default, the information will bepresented in a standard format, making comparison and understanding easier by a frequent user of the website.
+* Information is now able to be maintained and made available online at all times.  By default, the information will be presented in a standard format, making comparison and understanding easier by a frequent user of the website.
 
 * By implementing an online platform for Client users to access the information, this will mean that there is both a necessity by the QS to collate, maintain and update data, and demand by the Client user for that information to be so.  There will be a requirement to be proactive rather than reactive to maintain record information.
 
