@@ -265,9 +265,21 @@ There are no errors found on the validation service.
 
 ### Further Testing
 
+During the development of the website, and again as a final, comprehensive and in-depth review, the following testing was carried out:-
+
 * The Website was tested on Google Chrome, Internet Explorer, Microsoft Edge and Safari browsers.
-* The website was viewed on a variety of devices such as Desktop, Laptop, iPhone 8 & iPhoneX.
+* The website was viewed on a variety of devices: Desktop, Laptop, iPhone 8 & iPhoneX.
 * A large amount of testing was done to ensure that all pages were linking correctly.
+* Buttons were checked to ensure when hovered or active that they are responsive and operate uniformly.
+* External links were checked as functioning and opened on new browser tabs.
+
+### Known Bugs
+
+The following issues were identified during the testing of the site:-
+
+* On the timeline, the dates are a mixture of regular and bold text.  It does not appear possible to format this axis on this particular chart type.
+* The Chart size does not respond on page re-sizing without re-freshing.  This is a known limitation of Google Charts.
+* The pie chart does not show the Total, only a breakdown of the values.  This is also a limitation of the particular Google Chart type.
 
 ### User Story Feedback
 
@@ -284,13 +296,6 @@ Responding to the User Story, I believe this website has started to address the 
 * Delivery of information will no longer be rushed, and will now be available on demand in a standard format.  Accuracy should be enhanced through standardisation and collation into a central location that is regularly maintained.
 
 Consequently, the website should be a useful tool for both the QS to store and maintain key information, as well as for clients who reqularly request this kind of information.  Not only will the information be available on demand, but the information should be more readily understood and seen in a consistent, highly professional format.
-
-
-### Known Bugs
-
-* On the timeline, the dates are a mixture of regular and bold text.  It does not appear possible to format this axis on this particular chart type.
-* The Chart size does not respond on page re-sizing without re-freshing.
-* The Pie Chart does not show the Total, only a breakdown of the values.
 
 
 ## Deployment
