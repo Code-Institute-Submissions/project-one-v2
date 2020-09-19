@@ -241,6 +241,20 @@ Screen Recorder used for creating videos (edited in Kapwing) of website features
 
 ## Testing
 
+### User Story Feedback and Testing
+
+Responding to the User Story, I believe this website has started to address the conclusions outlined.  Taking each point in turn:-
+
+ **Item** | **Objective** | **Result**
+---------|----------------|---------------
+1 | Provide a website so clients can access past and present cost data | A *breakdown* of project costs is provided on each 'Project' page. A timeline is also included on each page so that users may check the period of construction
+2 | Include an Overview page that compares projects against one another | The landing page is an Overview page. This compares the *total* cost and timeline data at a higher level than the Project pages show.  This allows the client to see the range and average costs at a glance.
+3 | Collate diverse pieces of information to centralise and standardise data | Whilst cost data is the primary information, this is supplemented by programme (timeline) data and a Gallery.  This provides context for the client, who may not have been directly involved in the project.  Whilst the data compilation of this data seems logical, it is not often done by the QS.
+4 | Provide information in a clear and consistent format | The format of each Project page is the same, so users can become acquainted and familiar with the style, making it very user friendly. The Overview page varies slightly, but still resembles the Project pages.  The presentation is clean and simple, so users can focus on the information.
+5 | Primary means to store data by QSs | By exposing clients to the website, there will be an implicit requirement by QSs to utilise the website to store the data.  It will become a requirement as the user base grows.
+
+In summary, the website should be a useful tool for both the QS to store and maintain key information, as well as for clients who reqularly request this kind of information.  Not only will the information be available on demand, but the information should be more readily understood and seen in a consistent, highly professional format.
+
 ### Validators
 
 The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.
@@ -259,37 +273,57 @@ There are 3 warnings common to all the pages which are highlighted from the vali
 
 There are no errors found on the validation service.
 
+### Manual Testing of the Site
+
+The following tests were carried out to ensure functionality before deployment:-
+
+**Test**: Check that website links are functioning (Nav bar)  
+* Steps followed:  
+  * Clicked first link (Overview) in the Navbar;
+  * Checked correct destination/page loads;
+  * Pressed 'Back' to return to page under test;
+  * Proceeded to next link and followed above steps until all links tested.
+  * Proceeded to next page and followed the above steps until all pages tested.
+* Results:  All links were functioning.
+
+**Test**: Check that the Timeline button and pop-up are functioning  
+* Steps followed:  
+  * Timeline button pressed twice on each page in turn;
+  * On first press, 'X' to close pop-up pressed to ensure functioning to close the pop-up.
+  * On second press, mouse click outside of pop-up pressed to ensure pop-up closes.
+* Results:  Timeline button and pop-ups are all functioning.
+
+**Test**: Check that the Gallery carousel cycles through images in a consistent format  
+* Steps followed:  
+  * Cycled through images on each Project page in both directions.
+  * This was carried out on each Project page.
+* Results:  Some images were different sizes.
+* Fix: Image sizes were checked.  Those that were not 1280 x 720 were re-sized and re-uploaded.
+
+**Test**: Check that Footer Map and Links work as expected 
+* Steps followed:  
+  * Clicked the 'Project Map' button to show map, and then clicked again to ensure that it hides;
+  * Checked that website link images enlarge when they are hovered over;
+  * Both website links clicked to confirm correct websites are loaded in a new window.
+  * The above steps were repeated for each page in turn.
+* Results:  Footer map and links function as expected.
+
 ### Further Testing
 
 During the development of the website, and again as a final, comprehensive and in-depth review, the following testing was carried out:-
 
 * The Website was tested on Google Chrome, Internet Explorer, Microsoft Edge and Safari browsers.
 * The website was viewed on a variety of devices: Desktop, Laptop, iPhone 8 & iPhoneX.
-* A large amount of testing was done to ensure that all pages were linking correctly.
 * Buttons were checked to ensure when hovered or active that they are responsive and operate uniformly.
-* External links were checked as functioning and opened on new browser tabs.
+
 
 ### Known Bugs
 
-The following issues were identified during the testing of the site:-
+The following issues were identified during development of the site:-
 
 * On the timeline, the dates are a mixture of regular and bold text.  It does not appear possible to format this axis on this particular chart type.
 * The Chart size does not respond on page re-sizing without re-freshing.  This is a known limitation of Google Charts.
 * The pie chart does not show the Total, only a breakdown of the values.  This is also a limitation of the particular Google Chart type.
-
-### User Story Feedback
-
-Responding to the User Story, I believe this website has started to address the conclusions outlined.  Taking each point in turn:-
-
- **Item** | **Objective** | **Result**
----------|----------------|---------------
-1 | Provide a website so clients can access past and present cost data | A *breakdown* of project costs is provided on each 'Project' page. A timeline is also included on each page so that users may check the period of construction
-2 | Include an Overview page that compares projects against one another | The landing page is an Overview page. This compares the *total* cost and timeline data at a higher level than the Project pages show.  This allows the client to see the range and average costs at a glance.
-3 | Collate diverse pieces of information to centralise and standardise data | Whilst cost data is the primary information, this is supplemented by programme (timeline) data and a Gallery.  This provides context for the client, who may not have been directly involved in the project.  Whilst the data compilation of this data seems logical, it is not often done by the QS.
-4 | Provide information in a clear and consistent format | The format of each Project page is the same, so users can become acquainted and familiar with the style, making it very user friendly. The Overview page varies slightly, but still resembles the Project pages.  The presentation is clean and simple, so users can focus on the information.
-5 | Primary means to store data by QSs | By exposing clients to the website, there will be an implicit requirement by QSs to utilise the website to store the data.  It will become a requirement as the user base grows.
-
-In summary, the website should be a useful tool for both the QS to store and maintain key information, as well as for clients who reqularly request this kind of information.  Not only will the information be available on demand, but the information should be more readily understood and seen in a consistent, highly professional format.
 
 
 ## Deployment
