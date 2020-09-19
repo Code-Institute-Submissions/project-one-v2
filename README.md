@@ -200,13 +200,18 @@ Included one for each project.  Purpose of these page is to provide further deta
 ### Frameworks, Libraries and Programmes Used 
 
 * [Bootstrap 4](https://getbootstrap.com/)  
-Bootstrap was used to assist with the responsiveness and styling of the website.
+Bootstrap was generally used to assist with the responsiveness and styling of the website.  Components which were utilised were:-
+  * [Buttons](https://getbootstrap.com/docs/4.5/components/buttons/)
+  * [Carousel](https://getbootstrap.com/docs/4.5/components/carousel/)
+  * [Collapse](https://getbootstrap.com/docs/4.5/components/collapse/)
+  * [Dropdowns](https://getbootstrap.com/docs/4.0/components/dropdowns/)
+  * [Modal](https://getbootstrap.com/docs/4.5/components/modal/) 
 
 * [Google fonts](https://fonts.google.com/)  
 Google fonts were used to import the 'Monserrat' font into the style.css file which is used on all pages throughout the project.
 
 * [Google Charts](https://developers.google.com/chart/)  
-Google Charts was used for displaying data in graphical format, including timelines, bar charts and pie charts.
+Google Charts was used for displaying data in graphical format, including [timelines](https://developers.google.com/chart/interactive/docs/gallery/timeline), [bar charts](https://developers.google.com/chart/interactive/docs/gallery/barchart) and [pie charts](https://developers.google.com/chart/interactive/docs/gallery/piechart).
 
 * [Google Maps Javascript API](https://developers.google.com/maps/documentation/javascript/overview) including [Styling Wizard](https://mapstyle.withgoogle.com/)  
 Google Maps was used in the footer to provide locations for the Projects.  Functionaly of the maps was limited in terms of zoom, map type and points of interest to maintain a simple viewport of the Park and Project locations only.  
@@ -373,7 +378,7 @@ All content was written by the developer.
 
 ### Media
 
-All Images are the ownership of Quintain, my employwer.
+All Images are the ownership of Quintain, my employer.
 
 ### Acknowledgements
 
