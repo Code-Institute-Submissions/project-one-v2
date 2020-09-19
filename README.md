@@ -16,21 +16,16 @@ The Website is primarily for Developer Clients, Development Managers and Project
 
 ### **User Stories**
 
-My experience as a QS has led me to the following conclusions:-
+My experience as a QS has led me to the following discern the following objectives:-
+ **Item** | **Experience** | **Objectives**
+---------|----------------|---------------
+1 | Clients regularly ask for high level cost information on projects, they do not store the data themselves | Provide a website that clients have access to which provides past and present cost information from their projects
+2 | Clients want to be able to compare projects against one another | Include an Overview page which shows projects lined up against one another
+3 | Information is normally maintained offline in a variety of formats and locations, which may not be consistent | Collate diverse pieces of information to provide a means to centralise and standardise data storage
+4 | Delivery of information can sometimes be rushed, resulting in poor presentation and / or incomplete information | The website should provide information in a clear and consistent format, so that users will become familiar with the site and the data
+5 | Clients will request information; there is often a time-lag to deliver that information due to the need to locate it | The website should be a primary means to store data by QSs
 
-* Clients regularly ask for high level cost information on projects, they do not store the data themselves.
-
-* Information is normally maintained offline in a variety of formats and locations, which may not be consistent.
-
-* Records that collate information are normally rare and if implemented, poorly maintained and not updated frequently.
-
-* Clients will request information; there is often a time-lag to deliver that information due to the need to locate it.
-
-* Delivery of information can sometimes be rushed, resulting in poor presentation, incomplete information or even inaccurate due to the above factors.
-
-By implementing a website that provides basic but key information for clients, the QS will ensure that information is correct and uploaded timeously, and be available on-demand for clients.
-
-I believe clients will really appreciate this level of access to information, as the information is often sought for time-critical reasons and ensure that information is presented in a consistent and professional manner.
+I believe clients will greatly appreciate a hiigher level of access to information which is maintained on their behalf, as the information is often sought for time-critical reasons and ensure that information is presented in a consistent and professional manner.
 
 
 ### **Functions of the Website**
@@ -246,6 +241,8 @@ Screen Recorder used for creating videos (edited in Kapwing) of website features
 
 ## Testing
 
+### Validators
+
 The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.
 
 * [W3C Markup Validator](https://validator.w3.org/)
@@ -261,7 +258,6 @@ There are 3 warnings common to all the pages which are highlighted from the vali
 * [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) - [Results](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fdkeddie.github.io%2Fproject-one%2Fassets%2Fcss%2Fstyle.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 
 There are no errors found on the validation service.
-
 
 ### Further Testing
 
@@ -285,17 +281,15 @@ The following issues were identified during the testing of the site:-
 
 Responding to the User Story, I believe this website has started to address the conclusions outlined.  Taking each point in turn:-
 
-* High level cost information is now available to clients with access to the site.  They do not require to store the data themselves, as it will be maintained and made available by their QS at all times.
+ **Item** | **Objective** | **Result**
+---------|----------------|---------------
+1 | Provide a website so clients can access past and present cost data | A *breakdown* of project costs is provided on each 'Project' page. A timeline is also included on each page so that users may check the period of construction
+2 | Include an Overview page that compares projects against one another | The landing page is an Overview page. This compares the *total* cost and timeline data at a higher level than the Project pages show.  This allows the client to see the range and average costs at a glance.
+3 | Collate diverse pieces of information to centralise and standardise data | Whilst cost data is the primary information, this is supplemented by programme (timeline) data and a Gallery.  This provides context for the client, who may not have been directly involved in the project.  Whilst the data compilation of this data seems logical, it is not often done by the QS.
+4 | Provide information in a clear and consistent format | The format of each Project page is the same, so users can become acquainted and familiar with the style, making it very user friendly. The Overview page varies slightly, but still resembles the Project pages.  The presentation is clean and simple, so users can focus on the information.
+5 | Primary means to store data by QSs | By exposing clients to the website, there will be an implicit requirement by QSs to utilise the website to store the data.  It will become a requirement as the user base grows.
 
-* Information is now able to be maintained and made available online at all times.  By default, the information will be presented in a standard format, making comparison and understanding easier by a frequent user of the website.
-
-* By implementing an online platform for Client users to access the information, this will mean that there is both a necessity by the QS to collate, maintain and update data, and demand by the Client user for that information to be so.  There will be a requirement to be proactive rather than reactive to maintain record information.
-
-* There should no timelag to providing historic information for clients, who can access the data themselves.  Albeit, if data has just been received, then it may still require input and there may be a short delay for the newest information to be uploaded.
-
-* Delivery of information will no longer be rushed, and will now be available on demand in a standard format.  Accuracy should be enhanced through standardisation and collation into a central location that is regularly maintained.
-
-Consequently, the website should be a useful tool for both the QS to store and maintain key information, as well as for clients who reqularly request this kind of information.  Not only will the information be available on demand, but the information should be more readily understood and seen in a consistent, highly professional format.
+In summary, the website should be a useful tool for both the QS to store and maintain key information, as well as for clients who reqularly request this kind of information.  Not only will the information be available on demand, but the information should be more readily understood and seen in a consistent, highly professional format.
 
 
 ## Deployment
