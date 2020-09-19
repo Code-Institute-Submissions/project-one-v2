@@ -262,14 +262,14 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 * [W3C Markup Validator](https://validator.w3.org/)
 
     Results:-
-    * [Overview](https://validator.w3.org/nu/?doc=https%3A%2F%2Fdkeddie.github.io%2Fproject-one%2Findex.html)
-    * [Project 1](https://validator.w3.org/nu/?doc=https%3A%2F%2Fdkeddie.github.io%2Fproject-one%2Fproject1.html)
-    * [Project 2](https://validator.w3.org/nu/?doc=https%3A%2F%2Fdkeddie.github.io%2Fproject-one%2Fproject2.html)
-    * [Project 3](https://validator.w3.org/nu/?doc=https%3A%2F%2Fdkeddie.github.io%2Fproject-one%2Fproject3.html)
+    * [Overview](https://validator.w3.org/nu/?doc=https%3A%2F%2Fdkeddie.github.io%2Fproject-one-v2%2Findex.html)
+    * [Project 1](https://validator.w3.org/nu/?doc=https%3A%2F%2Fdkeddie.github.io%2Fproject-one-v2%2Fproject1.html)
+    * [Project 2](https://validator.w3.org/nu/?doc=https%3A%2F%2Fdkeddie.github.io%2Fproject-one-v2%2Fproject2.html)
+    * [Project 3](https://validator.w3.org/nu/?doc=https%3A%2F%2Fdkeddie.github.io%2Fproject-one-v2%2Fproject3.html)
 
 There are 3 warnings common to all the pages which are highlighted from the validation.  These relate to the scripts used to import the Google Charts functionality into the website.  As the code has been copied from Google Charts, and not amended by myself, I have not attempted to rectify the issues flagged by the validation service, as they may alter the functionality of the scripts.
 
-* [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) - [Results](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fdkeddie.github.io%2Fproject-one%2Fassets%2Fcss%2Fstyle.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+* [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) - [Results](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fdkeddie.github.io%2Fproject-one-v2%2Fassets%2Fcss%2Fstyle.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 
 There are no errors found on the validation service.
 
