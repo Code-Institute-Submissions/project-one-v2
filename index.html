@@ -7,395 +7,20 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
 
-    <!-- Bootstrap - Start -->
+    <!-- Bootstrap CDN -->
 
-        <!-- Bootstrap CDN and associated utilities to enable functionality of Bootstrap components 
-        
-        Bootstrap layout has been used across the site.  Where Components have been utilised, these have been noted at the start of the relevant section
+        <!-- Bootstrap layout has been used across the site.  Where Components have been utilised, these have been noted at the start of the relevant section -->
 
-        -->
+        <link
+        rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+        crossorigin="anonymous"
+        />
 
-    <script
-      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-      crossorigin="anonymous"
-    ></script>
+    <!-- Link to style.css -->
+        <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-      crossorigin="anonymous"
-    ></script>
-
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
-      crossorigin="anonymous"
-    />
-
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-      crossorigin="anonymous"
-    ></script>
-
-    <!-- Bootstrap - End -->
-
-    <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
-
-    <!-- Google Chart - Bar Chart - Start -->
-
-        <!-- Utilises Google chart tools - https://developers.google.com/chart/ -->
-
-    <script
-      type="text/javascript"
-      src="https://www.gstatic.com/charts/loader.js"
-    ></script>
-    <script type="text/javascript">
-      google.charts.load("current", { packages: ["corechart"] });
-      google.charts.setOnLoadCallback(drawVisualization);
-
-      function drawVisualization() {
-        // Some raw data (not necessarily accurate)
-        var data = google.visualization.arrayToDataTable([
-          ["Month", "£/sqft", "Ave. £/sqft"],
-          ["1", 325, 323],
-          ["2", 310, 323],
-          ["3", 285, 323],
-        ]);
-
-        var options = {
-          vAxis: {
-            title: "£/sqft",
-            titleTextStyle: {
-              color: "#4D4036",
-              fontSize: "12",
-              italic: "false",
-              bold: "true",
-            },
-            gridlines: { color: "#E5D9CF", minSpacing: 25 },
-          },
-          hAxis: {
-            title: "Project",
-            titleTextStyle: {
-              color: "#4D4036",
-              fontSize: "12",
-              italic: "false",
-              bold: "true",
-            },
-          },
-          seriesType: "bars",
-          series: { 1: { type: "line" } },
-          colors: ["#7A9499", "#D65924"],
-          fontName: "Montserrat",
-          legend: "none",
-        };
-
-        var chart = new google.visualization.ComboChart(
-          document.getElementById("chart_div")
-        );
-        chart.draw(data, options);
-
-        titleTextStyle = {
-          color: "red",
-        };
-      }
-    </script>
-
-    <!-- Google Chart - Bar Chart - End -->
-
-    <!-- Google Chart - Timeline - Start -->
-
-        <!-- Utilises Google chart tools - https://developers.google.com/chart/ -->
-
-    <script type="text/javascript">
-      google.charts.load("current", { packages: ["timeline"] });
-      google.charts.setOnLoadCallback(drawChart);
-      function drawChart() {
-        var container = document.getElementById("timeline_overview");
-        var chart = new google.visualization.Timeline(container);
-        var dataTable = new google.visualization.DataTable();
-        dataTable.addColumn({ type: "string", id: "Activity" });
-        dataTable.addColumn({ type: "string", id: "Stage" });
-        dataTable.addColumn({ type: "date", id: "Start" });
-        dataTable.addColumn({ type: "date", id: "End" });
-        dataTable.addRows([
-          ["Construction", "Project 1", new Date(2013, 5), new Date(2016, 2)],
-          ["Construction", "Project 2", new Date(2014, 2), new Date(2017, 6)],
-          ["Construction", "Project 3", new Date(2014, 10), new Date(2017, 9)],
-        ]);
-
-        var options = {
-          timeline: {
-            showRowLabels: false,
-            barLabelStyle: { fontName: "Montserrat", fontSize: "15" },
-          },
-          hAxis: {
-            minValue: new Date(2013, 3),
-            format: "QQ YYY",
-            gridlines: {
-              count: -1,
-            },
-          },
-          colors: ["#99897B", "#4D4036", "#7A9499"],
-          width: 740,
-          height: 200,
-          fontName: "Montserrat",
-        };
-
-        chart.draw(dataTable, options);
-      }
-    </script>
-
-    <!-- Google Chart - Timeline - End -->
-
-    <!-- Map Script and Formatting - Start -->
-    
-        <!-- Utilises Google Maps Javascript API - https://developers.google.com/maps/documentation/javascript/overview - 
-        and Styling Wizard - https://mapstyle.withgoogle.com/ -->
-
-    <script>
-      var labels = "123456789";
-      var labelIndex = 0;
-
-      function initMap() {
-        var wembleypark = { lat: 51.55952122707162, lng: -0.2796339857052112 };
-        var project1 = { lat: 51.557413441145606, lng: -0.28142568065666623 };
-        var project2 = { lat: 51.55510569541343, lng: -0.28358689973511564 };
-        var project3 = { lat: 51.55802377529137, lng: -0.2764046434226198 };
-
-        var map = new google.maps.Map(document.getElementById("map"), {
-          zoom: 14.5,
-          center: wembleypark,
-          streetViewControl: false,
-          zoomControl: false,
-          myTypeControl: false,
-          mapTypeControl: false,
-          fullscreenControl: false,
-          mapTypeId: "roadmap",
-          styles: [
-            {
-              elementType: "geometry",
-              stylers: [
-                {
-                  color: "#f5f5f5",
-                },
-              ],
-            },
-            {
-              elementType: "labels.icon",
-              stylers: [
-                {
-                  visibility: "off",
-                },
-              ],
-            },
-            {
-              elementType: "labels.text.fill",
-              stylers: [
-                {
-                  color: "#616161",
-                },
-              ],
-            },
-            {
-              elementType: "labels.text.stroke",
-              stylers: [
-                {
-                  color: "#f5f5f5",
-                },
-              ],
-            },
-            {
-              featureType: "administrative.land_parcel",
-              elementType: "labels.text.fill",
-              stylers: [
-                {
-                  color: "#bdbdbd",
-                },
-              ],
-            },
-            {
-              featureType: "poi",
-              elementType: "geometry",
-              stylers: [
-                {
-                  color: "#eeeeee",
-                },
-              ],
-            },
-            {
-              featureType: "poi",
-              elementType: "labels.text",
-              stylers: [
-                {
-                  visibility: "off",
-                },
-              ],
-            },
-            {
-              featureType: "poi",
-              elementType: "labels.text.fill",
-              stylers: [
-                {
-                  color: "#757575",
-                },
-              ],
-            },
-            {
-              featureType: "poi.business",
-              stylers: [
-                {
-                  visibility: "off",
-                },
-              ],
-            },
-            {
-              featureType: "poi.park",
-              elementType: "geometry",
-              stylers: [
-                {
-                  color: "#e5e5e5",
-                },
-              ],
-            },
-            {
-              featureType: "poi.park",
-              elementType: "labels.text.fill",
-              stylers: [
-                {
-                  color: "#9e9e9e",
-                },
-              ],
-            },
-            {
-              featureType: "road",
-              elementType: "geometry",
-              stylers: [
-                {
-                  color: "#ffffff",
-                },
-              ],
-            },
-            {
-              featureType: "road",
-              elementType: "labels.icon",
-              stylers: [
-                {
-                  visibility: "off",
-                },
-              ],
-            },
-            {
-              featureType: "road.arterial",
-              elementType: "labels.text.fill",
-              stylers: [
-                {
-                  color: "#757575",
-                },
-              ],
-            },
-            {
-              featureType: "road.highway",
-              elementType: "geometry",
-              stylers: [
-                {
-                  color: "#dadada",
-                },
-              ],
-            },
-            {
-              featureType: "road.highway",
-              elementType: "labels.text.fill",
-              stylers: [
-                {
-                  color: "#616161",
-                },
-              ],
-            },
-            {
-              featureType: "road.local",
-              elementType: "labels.text.fill",
-              stylers: [
-                {
-                  color: "#9e9e9e",
-                },
-              ],
-            },
-            {
-              featureType: "transit",
-              stylers: [
-                {
-                  visibility: "on",
-                },
-              ],
-            },
-            {
-              featureType: "transit.line",
-              elementType: "geometry",
-              stylers: [
-                {
-                  color: "#e5e5e5",
-                },
-              ],
-            },
-            {
-              featureType: "transit.station",
-              elementType: "geometry",
-              stylers: [
-                {
-                  color: "#eeeeee",
-                },
-              ],
-            },
-            {
-              featureType: "water",
-              elementType: "geometry",
-              stylers: [
-                {
-                  color: "#c9c9c9",
-                },
-              ],
-            },
-            {
-              featureType: "water",
-              elementType: "labels.text.fill",
-              stylers: [
-                {
-                  color: "#9e9e9e",
-                },
-              ],
-            },
-          ],
-        });
-
-        // The marker, positioned at Uluru
-        var marker = new google.maps.Marker({
-          position: project1,
-          label: labels[labelIndex++ % labels.length],
-          map: map,
-        });
-        var marker = new google.maps.Marker({
-          position: project2,
-          label: labels[labelIndex++ % labels.length],
-          map: map,
-        });
-        var marker = new google.maps.Marker({
-          position: project3,
-          label: labels[labelIndex++ % labels.length],
-          map: map,
-        });
-      }
-    </script>
-
-    <script
-      async
-      defer
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDVpHLcJ-9sjMpQu5v_RI_BRk1OGEU2RpA&callback=initMap"
-    ></script>
-
-    <!-- Map Script and Formatting - End -->
 
     <title>WP - Overview</title>
 
@@ -734,5 +359,384 @@
         </div>
       </div>
     </footer>
+
+<!-------------------------------------------------------------------SCRIPTS -->
+
+    <!-- Bootstrap Scripts -->
+
+        <script
+        src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"
+        ></script>
+
+        <script
+        src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"
+        ></script>
+
+        <script
+        src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"
+        ></script>
+
+
+    <!-- Google Chart Scripts - Bar Chart - Start -->
+
+        <!-- Utilises Google chart tools - https://developers.google.com/chart/ -->
+
+    <script
+      type="text/javascript"
+      src="https://www.gstatic.com/charts/loader.js"
+    ></script>
+    
+    <script type="text/javascript">
+      google.charts.load("current", { packages: ["corechart"] });
+      google.charts.setOnLoadCallback(drawVisualization);
+
+      function drawVisualization() {
+        // Some raw data (not necessarily accurate)
+        var data = google.visualization.arrayToDataTable([
+          ["Month", "£/sqft", "Ave. £/sqft"],
+          ["1", 325, 323],
+          ["2", 310, 323],
+          ["3", 285, 323],
+        ]);
+
+        var options = {
+          vAxis: {
+            title: "£/sqft",
+            titleTextStyle: {
+              color: "#4D4036",
+              fontSize: "12",
+              italic: "false",
+              bold: "true",
+            },
+            gridlines: { color: "#E5D9CF", minSpacing: 25 },
+          },
+          hAxis: {
+            title: "Project",
+            titleTextStyle: {
+              color: "#4D4036",
+              fontSize: "12",
+              italic: "false",
+              bold: "true",
+            },
+          },
+          seriesType: "bars",
+          series: { 1: { type: "line" } },
+          colors: ["#7A9499", "#D65924"],
+          fontName: "Montserrat",
+          legend: "none",
+        };
+
+        var chart = new google.visualization.ComboChart(
+          document.getElementById("chart_div")
+        );
+        chart.draw(data, options);
+
+        titleTextStyle = {
+          color: "red",
+        };
+      }
+    </script>
+
+    <!-- Google Chart - Bar Chart - End -->
+
+        <!-- Google Chart - Timeline - Start -->
+
+        <!-- Utilises Google chart tools - https://developers.google.com/chart/ -->
+
+    <script type="text/javascript">
+      google.charts.load("current", { packages: ["timeline"] });
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var container = document.getElementById("timeline_overview");
+        var chart = new google.visualization.Timeline(container);
+        var dataTable = new google.visualization.DataTable();
+        dataTable.addColumn({ type: "string", id: "Activity" });
+        dataTable.addColumn({ type: "string", id: "Stage" });
+        dataTable.addColumn({ type: "date", id: "Start" });
+        dataTable.addColumn({ type: "date", id: "End" });
+        dataTable.addRows([
+          ["Construction", "Project 1", new Date(2013, 5), new Date(2016, 2)],
+          ["Construction", "Project 2", new Date(2014, 2), new Date(2017, 6)],
+          ["Construction", "Project 3", new Date(2014, 10), new Date(2017, 9)],
+        ]);
+
+        var options = {
+          timeline: {
+            showRowLabels: false,
+            barLabelStyle: { fontName: "Montserrat", fontSize: "15" },
+          },
+          hAxis: {
+            minValue: new Date(2013, 3),
+            format: "QQ YYY",
+            gridlines: {
+              count: -1,
+            },
+          },
+          colors: ["#99897B", "#4D4036", "#7A9499"],
+          width: 740,
+          height: 200,
+          fontName: "Montserrat",
+        };
+
+        chart.draw(dataTable, options);
+      }
+    </script>
+
+    <!-- Google Chart - Timeline - End -->
+
+    <!-- Map Script and Formatting - Start -->
+    
+        <!-- Utilises Google Maps Javascript API - https://developers.google.com/maps/documentation/javascript/overview - 
+        and Styling Wizard - https://mapstyle.withgoogle.com/ -->
+
+    <script>
+      var labels = "123456789";
+      var labelIndex = 0;
+
+      function initMap() {
+        var wembleypark = { lat: 51.55952122707162, lng: -0.2796339857052112 };
+        var project1 = { lat: 51.557413441145606, lng: -0.28142568065666623 };
+        var project2 = { lat: 51.55510569541343, lng: -0.28358689973511564 };
+        var project3 = { lat: 51.55802377529137, lng: -0.2764046434226198 };
+
+        var map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 14.5,
+          center: wembleypark,
+          streetViewControl: false,
+          zoomControl: false,
+          myTypeControl: false,
+          mapTypeControl: false,
+          fullscreenControl: false,
+          mapTypeId: "roadmap",
+          styles: [
+            {
+              elementType: "geometry",
+              stylers: [
+                {
+                  color: "#f5f5f5",
+                },
+              ],
+            },
+            {
+              elementType: "labels.icon",
+              stylers: [
+                {
+                  visibility: "off",
+                },
+              ],
+            },
+            {
+              elementType: "labels.text.fill",
+              stylers: [
+                {
+                  color: "#616161",
+                },
+              ],
+            },
+            {
+              elementType: "labels.text.stroke",
+              stylers: [
+                {
+                  color: "#f5f5f5",
+                },
+              ],
+            },
+            {
+              featureType: "administrative.land_parcel",
+              elementType: "labels.text.fill",
+              stylers: [
+                {
+                  color: "#bdbdbd",
+                },
+              ],
+            },
+            {
+              featureType: "poi",
+              elementType: "geometry",
+              stylers: [
+                {
+                  color: "#eeeeee",
+                },
+              ],
+            },
+            {
+              featureType: "poi",
+              elementType: "labels.text",
+              stylers: [
+                {
+                  visibility: "off",
+                },
+              ],
+            },
+            {
+              featureType: "poi",
+              elementType: "labels.text.fill",
+              stylers: [
+                {
+                  color: "#757575",
+                },
+              ],
+            },
+            {
+              featureType: "poi.business",
+              stylers: [
+                {
+                  visibility: "off",
+                },
+              ],
+            },
+            {
+              featureType: "poi.park",
+              elementType: "geometry",
+              stylers: [
+                {
+                  color: "#e5e5e5",
+                },
+              ],
+            },
+            {
+              featureType: "poi.park",
+              elementType: "labels.text.fill",
+              stylers: [
+                {
+                  color: "#9e9e9e",
+                },
+              ],
+            },
+            {
+              featureType: "road",
+              elementType: "geometry",
+              stylers: [
+                {
+                  color: "#ffffff",
+                },
+              ],
+            },
+            {
+              featureType: "road",
+              elementType: "labels.icon",
+              stylers: [
+                {
+                  visibility: "off",
+                },
+              ],
+            },
+            {
+              featureType: "road.arterial",
+              elementType: "labels.text.fill",
+              stylers: [
+                {
+                  color: "#757575",
+                },
+              ],
+            },
+            {
+              featureType: "road.highway",
+              elementType: "geometry",
+              stylers: [
+                {
+                  color: "#dadada",
+                },
+              ],
+            },
+            {
+              featureType: "road.highway",
+              elementType: "labels.text.fill",
+              stylers: [
+                {
+                  color: "#616161",
+                },
+              ],
+            },
+            {
+              featureType: "road.local",
+              elementType: "labels.text.fill",
+              stylers: [
+                {
+                  color: "#9e9e9e",
+                },
+              ],
+            },
+            {
+              featureType: "transit",
+              stylers: [
+                {
+                  visibility: "on",
+                },
+              ],
+            },
+            {
+              featureType: "transit.line",
+              elementType: "geometry",
+              stylers: [
+                {
+                  color: "#e5e5e5",
+                },
+              ],
+            },
+            {
+              featureType: "transit.station",
+              elementType: "geometry",
+              stylers: [
+                {
+                  color: "#eeeeee",
+                },
+              ],
+            },
+            {
+              featureType: "water",
+              elementType: "geometry",
+              stylers: [
+                {
+                  color: "#c9c9c9",
+                },
+              ],
+            },
+            {
+              featureType: "water",
+              elementType: "labels.text.fill",
+              stylers: [
+                {
+                  color: "#9e9e9e",
+                },
+              ],
+            },
+          ],
+        });
+
+        // The marker, positioned at Uluru
+        var marker = new google.maps.Marker({
+          position: project1,
+          label: labels[labelIndex++ % labels.length],
+          map: map,
+        });
+        var marker = new google.maps.Marker({
+          position: project2,
+          label: labels[labelIndex++ % labels.length],
+          map: map,
+        });
+        var marker = new google.maps.Marker({
+          position: project3,
+          label: labels[labelIndex++ % labels.length],
+          map: map,
+        });
+      }
+    </script>
+
+    <script
+      async
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDVpHLcJ-9sjMpQu5v_RI_BRk1OGEU2RpA&callback=initMap"
+    ></script>
+
+    <!-- Map Script and Formatting - End -->
+
+
   </body>
 </html>
